@@ -1,0 +1,16 @@
+{
+  "name": "projet_3_oc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "main": "sass --watch ./scss/main.scss:./css/main.css",
+    "palette": "sass --watch ./scss/palette.scss:./css/palette.css",
+    "note": "sass --watch ./scss/note.scss:./css/note.css",
+    "francaise": "sass --watch ./scss/francaise.scss:./css/francaise.css",
+    "delice": "sass --watch ./scss/delice.scss:./css/delice.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,15 @@
+header {
+    display: flex;
+    margin-left: 15px;
+    & .fa-arrow-left {
+        color: black;
+        margin: 20px 15px 0 0;
+    }
+    & .logo {
+        margin: 0 0 10px 15px;
+        padding-top: 10px;
+        & #logo {
+            width: 220px;
+        }
+    }
+}

@@ -1,0 +1,1345 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@keyframes apparition {
+  0% {
+    transform: translateY(30%);
+    opacity: 0%;
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 50%;
+  }
+  90% {
+    transform: translateY(-15%);
+    opacity: 70%;
+  }
+  100% {
+    transform: translateY(-30%);
+    opacity: 100%;
+  }
+}
+@keyframes marquage {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translate(0px, 0);
+  }
+}
+@keyframes spinner {
+  100% {
+    transform: scale(0, 0);
+  }
+}
+@keyframes animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+footer {
+  padding: 2px 0 0 20px;
+  margin-top: -15px;
+  background-color: #363636;
+  height: 170px;
+}
+footer p {
+  font-family: Shrikhand;
+  color: white;
+  font-size: 17px;
+}
+footer ul li {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0 0 5px -35px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+footer ul li .fa-utensils {
+  margin-right: 17px;
+  color: white;
+}
+footer ul li .fa-handshake {
+  margin-right: 10px;
+  color: white;
+}
+
+header {
+  background-color: #f7f7f7;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  padding: 10px 0 0 20px;
+}
+header .fa-arrow-left {
+  color: black;
+  margin: 20px 30px 0 0;
+}
+@media (max-width: 360px) {
+  header .fa-arrow-left {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 300px) {
+  header .fa-arrow-left {
+    margin-top: 10px;
+  }
+}
+header .logo {
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+header .logo #logo {
+  width: 55%;
+}
+
+@media (max-width: 999px) {
+  header {
+    width: 98%;
+  }
+}
+.centre .image #restaurant {
+  width: 660px;
+  margin-left: 175px;
+}
+@media (max-width: 999px) {
+  .centre .image #restaurant {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+.centre .carte {
+  width: auto;
+  height: 415px;
+  background-color: #f7f7f7;
+  border-radius: 0 0 15px 15px;
+  padding-left: 20px;
+}
+.centre .carte .tete {
+  display: flex;
+}
+.centre .carte .tete #coeur-bord {
+  padding-top: 17px;
+  margin-right: -21px;
+  position: relative;
+  z-index: 2;
+  height: 17px;
+}
+.centre .carte .tete #coeur-bord:hover + #coeur {
+  opacity: 1;
+}
+.centre .carte .tete #coeur {
+  padding-top: 17px;
+  cursor: default;
+  position: relative;
+  z-index: 1;
+  height: 17px;
+  opacity: 0;
+  transition: opacity 1000ms;
+  background: linear-gradient(#FF79DA, 50%, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.centre .carte .tete p {
+  font-family: Shrikhand;
+  font-size: 30px;
+  margin: 5px 20px 0 0;
+}
+@media (max-width: 999px) {
+  .centre .carte .tete p {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 372px) {
+  .centre .carte .tete p {
+    font-size: 27px;
+  }
+}
+@media (max-width: 350px) {
+  .centre .carte .tete p {
+    font-size: 24px;
+  }
+}
+@media (max-width: 318px) {
+  .centre .carte .tete p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 302px) {
+  .centre .carte .tete p {
+    font-size: 20px;
+  }
+}
+.centre .carte .menu {
+  margin-top: 20px;
+  margin-bottom: -20px;
+  display: flex;
+}
+.centre .carte .menu .entree {
+  transform: translateY(-10%);
+  transition: transform 1200ms ease-in;
+}
+.centre .carte .menu .entree #text1 {
+  border-bottom: 3px solid #99E2D0;
+  width: 35px;
+}
+.centre .carte .menu .entree p {
+  font-size: 16px;
+}
+.centre .carte .menu .entree .tartare, .centre .carte .menu .entree .veloute, .centre .carte .menu .entree .bouchee {
+  padding-left: 10px;
+  margin: 0 10px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 6px 10px -5px #c9c9c9;
+  border-radius: 10px;
+  height: 60px;
+  width: 300px;
+  animation: apparition 1800ms 200ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .entree .tartare:hover span, .centre .carte .menu .entree .veloute:hover span, .centre .carte .menu .entree .bouchee:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .entree .tartare:hover span .fa-check-circle, .centre .carte .menu .entree .veloute:hover span .fa-check-circle, .centre .carte .menu .entree .bouchee:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .entree .tartare:hover .text .prix, .centre .carte .menu .entree .veloute:hover .text .prix, .centre .carte .menu .entree .bouchee:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .entree .tartare .text, .centre .carte .menu .entree .veloute .text, .centre .carte .menu .entree .bouchee .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .entree .tartare .text .inline, .centre .carte .menu .entree .veloute .text .inline, .centre .carte .menu .entree .bouchee .text .inline {
+  display: inline;
+  margin-right: 76px;
+}
+.centre .carte .menu .entree .tartare .text .inline h2, .centre .carte .menu .entree .veloute .text .inline h2, .centre .carte .menu .entree .bouchee .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .entree .tartare .text .inline h2, .centre .carte .menu .entree .veloute .text .inline h2, .centre .carte .menu .entree .bouchee .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .entree .tartare .text .inline p, .centre .carte .menu .entree .veloute .text .inline p, .centre .carte .menu .entree .bouchee .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .entree .tartare .text .inline h2, .centre .carte .menu .entree .veloute .text .inline h2, .centre .carte .menu .entree .bouchee .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .entree .tartare .text .inline, .centre .carte .menu .entree .veloute .text .inline, .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: 719px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .entree .tartare .text .inline, .centre .carte .menu .entree .veloute .text .inline, .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: 495px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .entree .tartare .text .inline, .centre .carte .menu .entree .veloute .text .inline, .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: 273px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .entree .tartare .text .inline, .centre .carte .menu .entree .veloute .text .inline, .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: 145px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .entree .tartare .text .inline, .centre .carte .menu .entree .veloute .text .inline, .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: 143px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .entree .tartare .text .inline, .centre .carte .menu .entree .veloute .text .inline, .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: 111px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .entree .tartare .text .inline, .centre .carte .menu .entree .veloute .text .inline, .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: 96px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .entree .tartare .text .inline, .centre .carte .menu .entree .veloute .text .inline, .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: 57px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .entree .tartare .text .inline, .centre .carte .menu .entree .veloute .text .inline, .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: -15px;
+  }
+}
+.centre .carte .menu .entree .tartare .text .prix, .centre .carte .menu .entree .veloute .text .prix, .centre .carte .menu .entree .bouchee .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .entree .tartare .text .prix h2, .centre .carte .menu .entree .veloute .text .prix h2, .centre .carte .menu .entree .bouchee .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .entree .tartare span, .centre .carte .menu .entree .veloute span, .centre .carte .menu .entree .bouchee span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .entree .tartare .fa-check-circle, .centre .carte .menu .entree .veloute .fa-check-circle, .centre .carte .menu .entree .bouchee .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .entree .tartare, .centre .carte .menu .entree .veloute, .centre .carte .menu .entree .bouchee {
+    width: auto;
+  }
+}
+.centre .carte .menu .entree .bouchee {
+  margin-top: 0px;
+  animation: apparition 1800ms 500ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .entree .bouchee:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .entree .bouchee:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .entree .bouchee:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .entree .bouchee .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .entree .bouchee .text .inline {
+  display: inline;
+  margin-right: -35px;
+}
+.centre .carte .menu .entree .bouchee .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .entree .bouchee .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .entree .bouchee .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .entree .bouchee .text .inline p {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: 609px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: 384px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: 162px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: 36px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: 33px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: 1px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: -16px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: -55px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .entree .bouchee .text .inline {
+    margin-right: -14px;
+  }
+}
+.centre .carte .menu .entree .bouchee .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .entree .bouchee .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .entree .bouchee span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .entree .bouchee .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+.centre .carte .menu .entree .veloute {
+  margin-top: 0px;
+  animation: apparition 1800ms 800ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .entree .veloute:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .entree .veloute:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .entree .veloute:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .entree .veloute .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .entree .veloute .text .inline {
+  display: inline;
+  margin-right: 73px;
+}
+.centre .carte .menu .entree .veloute .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .entree .veloute .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .entree .veloute .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .entree .veloute .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .entree .veloute .text .inline {
+    margin-right: 717px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .entree .veloute .text .inline {
+    margin-right: 492px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .entree .veloute .text .inline {
+    margin-right: 270px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .entree .veloute .text .inline {
+    margin-right: 142px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .entree .veloute .text .inline {
+    margin-right: 138px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .entree .veloute .text .inline {
+    margin-right: 107px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .entree .veloute .text .inline {
+    margin-right: 89px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .entree .veloute .text .inline {
+    margin-right: 53px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .entree .veloute .text .inline {
+    margin-right: -14px;
+  }
+}
+.centre .carte .menu .entree .veloute .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .entree .veloute .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .entree .veloute span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .entree .veloute .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+.centre .carte .menu .plats {
+  transform: translateY(-10%);
+  transition: transform 1200ms ease-in 1400ms;
+}
+.centre .carte .menu .plats #text2 {
+  border-bottom: 3px solid #99E2D0;
+  width: 35px;
+}
+.centre .carte .menu .plats p {
+  font-size: 16px;
+}
+.centre .carte .menu .plats .poulet, .centre .carte .menu .plats .cote, .centre .carte .menu .plats .langouste {
+  padding-left: 10px;
+  margin: 0 10px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 6px 10px -5px #c9c9c9;
+  border-radius: 10px;
+  height: 60px;
+  width: 300px;
+  animation: apparition 1800ms 1400ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .plats .poulet:hover span, .centre .carte .menu .plats .cote:hover span, .centre .carte .menu .plats .langouste:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .plats .poulet:hover span .fa-check-circle, .centre .carte .menu .plats .cote:hover span .fa-check-circle, .centre .carte .menu .plats .langouste:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .plats .poulet:hover .text .prix, .centre .carte .menu .plats .cote:hover .text .prix, .centre .carte .menu .plats .langouste:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .plats .poulet .text, .centre .carte .menu .plats .cote .text, .centre .carte .menu .plats .langouste .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .plats .poulet .text .inline, .centre .carte .menu .plats .cote .text .inline, .centre .carte .menu .plats .langouste .text .inline {
+  display: inline;
+  margin-right: -52px;
+}
+.centre .carte .menu .plats .poulet .text .inline h2, .centre .carte .menu .plats .cote .text .inline h2, .centre .carte .menu .plats .langouste .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .plats .poulet .text .inline h2, .centre .carte .menu .plats .cote .text .inline h2, .centre .carte .menu .plats .langouste .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .plats .poulet .text .inline p, .centre .carte .menu .plats .cote .text .inline p, .centre .carte .menu .plats .langouste .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .plats .poulet .text .inline h2, .centre .carte .menu .plats .cote .text .inline h2, .centre .carte .menu .plats .langouste .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .plats .poulet .text .inline, .centre .carte .menu .plats .cote .text .inline, .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: 590px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .plats .poulet .text .inline, .centre .carte .menu .plats .cote .text .inline, .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: 366px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .plats .poulet .text .inline, .centre .carte .menu .plats .cote .text .inline, .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: 142px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .plats .poulet .text .inline, .centre .carte .menu .plats .cote .text .inline, .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: 16px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .plats .poulet .text .inline, .centre .carte .menu .plats .cote .text .inline, .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .plats .poulet .text .inline, .centre .carte .menu .plats .cote .text .inline, .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: -22px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .plats .poulet .text .inline, .centre .carte .menu .plats .cote .text .inline, .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: -34px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .plats .poulet .text .inline, .centre .carte .menu .plats .cote .text .inline, .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: -74px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .plats .poulet .text .inline, .centre .carte .menu .plats .cote .text .inline, .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: -14px;
+  }
+}
+.centre .carte .menu .plats .poulet .text .prix, .centre .carte .menu .plats .cote .text .prix, .centre .carte .menu .plats .langouste .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .plats .poulet .text .prix h2, .centre .carte .menu .plats .cote .text .prix h2, .centre .carte .menu .plats .langouste .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .plats .poulet span, .centre .carte .menu .plats .cote span, .centre .carte .menu .plats .langouste span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .plats .poulet .fa-check-circle, .centre .carte .menu .plats .cote .fa-check-circle, .centre .carte .menu .plats .langouste .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .plats .poulet, .centre .carte .menu .plats .cote, .centre .carte .menu .plats .langouste {
+    width: auto;
+  }
+}
+.centre .carte .menu .plats .langouste {
+  animation: apparition 1800ms 1700ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .plats .langouste:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .plats .langouste:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .plats .langouste:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .plats .langouste .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .plats .langouste .text .inline {
+  display: inline;
+  margin-right: 57px;
+}
+.centre .carte .menu .plats .langouste .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .plats .langouste .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .plats .langouste .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .plats .langouste .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: 700px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: 474px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: 253px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: 124px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: 124px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: 87px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: 76px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: 35px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .plats .langouste .text .inline {
+    margin-right: -14px;
+  }
+}
+.centre .carte .menu .plats .langouste .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .plats .langouste .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .plats .langouste span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .plats .langouste .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+.centre .carte .menu .plats .cote {
+  animation: apparition 1800ms 2000ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .plats .cote:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .plats .cote:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .plats .cote:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .plats .cote .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .plats .cote .text .inline {
+  display: inline;
+  margin-right: 45px;
+}
+.centre .carte .menu .plats .cote .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .plats .cote .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .plats .cote .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .plats .cote .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .plats .cote .text .inline {
+    margin-right: 688px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .plats .cote .text .inline {
+    margin-right: 464px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .plats .cote .text .inline {
+    margin-right: 243px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .plats .cote .text .inline {
+    margin-right: 115px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .plats .cote .text .inline {
+    margin-right: 115px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .plats .cote .text .inline {
+    margin-right: 78px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .plats .cote .text .inline {
+    margin-right: 65px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .plats .cote .text .inline {
+    margin-right: 25px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .plats .cote .text .inline {
+    margin-right: -14px;
+  }
+}
+.centre .carte .menu .plats .cote .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .plats .cote .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .plats .cote span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .plats .cote .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+.centre .carte .menu .desserts {
+  transform: translateY(-10%);
+  transition: transform 1200ms ease-in 2600ms;
+}
+.centre .carte .menu .desserts #text3 {
+  border-bottom: 3px solid #99E2D0;
+  width: 35px;
+}
+.centre .carte .menu .desserts p {
+  font-size: 16px;
+}
+.centre .carte .menu .desserts .farandole {
+  padding-left: 10px;
+  margin: 0 10px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 6px 10px -5px #c9c9c9;
+  border-radius: 10px;
+  height: 60px;
+  width: 300px;
+  animation: apparition 1800ms 2600ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .desserts .farandole:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .desserts .farandole:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .desserts .farandole:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .desserts .farandole .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .desserts .farandole .text .inline {
+  display: inline;
+  margin-right: 34px;
+}
+.centre .carte .menu .desserts .farandole .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .desserts .farandole .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .desserts .farandole .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .desserts .farandole .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .desserts .farandole .text .inline {
+    margin-right: 678px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .desserts .farandole .text .inline {
+    margin-right: 454px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .desserts .farandole .text .inline {
+    margin-right: 231px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .desserts .farandole .text .inline {
+    margin-right: 109px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .desserts .farandole .text .inline {
+    margin-right: 102px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .desserts .farandole .text .inline {
+    margin-right: 68px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .desserts .farandole .text .inline {
+    margin-right: 52px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .desserts .farandole .text .inline {
+    margin-right: 15px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .desserts .farandole .text .inline {
+    margin-right: -14px;
+  }
+}
+.centre .carte .menu .desserts .farandole .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .desserts .farandole .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .desserts .farandole span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .desserts .farandole .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .desserts .farandole {
+    width: auto;
+  }
+}
+.centre .carte .menu .desserts .creme {
+  padding-left: 10px;
+  margin: 0 10px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 6px 10px -5px #c9c9c9;
+  border-radius: 10px;
+  height: 60px;
+  width: 300px;
+  animation: apparition 1800ms 2900ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .desserts .creme:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .desserts .creme:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .desserts .creme:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .desserts .creme .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .desserts .creme .text .inline {
+  display: inline;
+  margin-right: 90px;
+}
+.centre .carte .menu .desserts .creme .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .desserts .creme .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .desserts .creme .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .desserts .creme .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .desserts .creme .text .inline {
+    margin-right: 733px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .desserts .creme .text .inline {
+    margin-right: 509px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .desserts .creme .text .inline {
+    margin-right: 284px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .desserts .creme .text .inline {
+    margin-right: 162px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .desserts .creme .text .inline {
+    margin-right: 158px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .desserts .creme .text .inline {
+    margin-right: 125px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .desserts .creme .text .inline {
+    margin-right: 109px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .desserts .creme .text .inline {
+    margin-right: 69px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .desserts .creme .text .inline {
+    margin-right: -13px;
+  }
+}
+.centre .carte .menu .desserts .creme .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .desserts .creme .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .desserts .creme span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .desserts .creme .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .desserts .creme {
+    width: auto;
+  }
+}
+.centre .carte .menu .desserts .tiramisu {
+  padding-left: 10px;
+  margin: 0 10px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 6px 10px -5px #c9c9c9;
+  border-radius: 10px;
+  height: 60px;
+  width: 300px;
+  animation: apparition 1800ms 3200ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .desserts .tiramisu:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .desserts .tiramisu:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .desserts .tiramisu:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .desserts .tiramisu .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .desserts .tiramisu .text .inline {
+  display: inline;
+  margin-right: 120px;
+}
+.centre .carte .menu .desserts .tiramisu .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .desserts .tiramisu .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .desserts .tiramisu .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .desserts .tiramisu .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .desserts .tiramisu .text .inline {
+    margin-right: 763px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .desserts .tiramisu .text .inline {
+    margin-right: 534px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .desserts .tiramisu .text .inline {
+    margin-right: 311px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .desserts .tiramisu .text .inline {
+    margin-right: 190px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .desserts .tiramisu .text .inline {
+    margin-right: 186px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .desserts .tiramisu .text .inline {
+    margin-right: 154px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .desserts .tiramisu .text .inline {
+    margin-right: 138px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .desserts .tiramisu .text .inline {
+    margin-right: 95px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .desserts .tiramisu .text .inline {
+    margin-right: -14px;
+  }
+}
+.centre .carte .menu .desserts .tiramisu .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .desserts .tiramisu .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .desserts .tiramisu span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .desserts .tiramisu .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .desserts .tiramisu {
+    width: auto;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu {
+    display: initial;
+  }
+}
+.centre .carte .btn a {
+  background: linear-gradient(#FF79DA, 50%, #9356DC);
+  box-shadow: 0px 10px 16px -10px rgba(97, 97, 97, 0.83);
+  border-radius: 20px;
+  padding: 14px 20px 14px 20px;
+  width: 6%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #f5f5f5;
+  font-size: 13px;
+  text-decoration: none;
+}
+.centre .carte .btn a:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 10px 16px -5px rgba(97, 97, 97, 0.83);
+}
+@media (max-width: 999px) {
+  .centre .carte {
+    height: 910px;
+    width: 98%;
+  }
+}
+
+.menu + a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=delice.css.map */
