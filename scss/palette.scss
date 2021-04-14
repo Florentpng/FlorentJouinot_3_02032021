@@ -1,0 +1,1298 @@
+@import "base/fonts";
+@import "utils/variables";
+@import "utils/keyframes";
+@import "layout/footer";
+
+// Header
+header {
+    background-color: $background;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    padding: 10px 0 0 20px;
+    & .fa-arrow-left {
+        color: black;
+        margin: 20px 30px 0 0;
+    }
+    @media (max-width: 360px) {
+        .fa-arrow-left {
+            margin-top: 15px;
+        }
+    }
+    @media (max-width: 300px) {
+        .fa-arrow-left {
+            margin-top: 10px;
+        }
+    }
+    & .logo {
+        margin-bottom: 15px;
+        padding-top: 10px;
+        & #logo {
+            width: 55%;
+        }
+    }
+}
+@media (max-width: 999px) {
+    header {
+        width: 98%;
+    }
+}
+
+// Centre de la page
+.centre {
+    & .image { // Image
+        & #restaurant {
+            width: 660px;
+            margin-left: 175px;
+        }
+        @media (max-width: 999px) {
+            #restaurant {
+                width: 100%;
+                margin-left: 0px;
+            }
+        }
+    }
+    & .carte {
+        width: auto;
+        height: 415px;
+        background-color: $background;
+        border-radius: 0 0 15px 15px;
+        padding-left: 20px;
+        & .tete { // Titre du restaurant
+            display: flex;
+            & #coeur-bord {
+                padding-top: 17px;
+                margin-right: -21px;
+                position: relative;
+                z-index: 2;
+                height: 17px;
+                &:hover + #coeur{
+                    opacity: 1; 
+                }
+            }
+            & #coeur {
+                padding-top: 17px;
+                cursor: default;
+                position: relative;
+                z-index: 1;
+                height: 17px;
+                opacity: 0;
+                transition: opacity 1000ms;
+                background: linear-gradient($secondary-color, 50%, $primary-color);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                
+            }
+            & p {
+                font-family: Shrikhand;
+                font-size: 30px;
+                margin: 5px 20px 0 0;
+            }
+            @media (max-width: 999px) {
+                p {
+                    margin-bottom: 20px;
+                }
+            }
+            @media (max-width: 372px) {
+                p {
+                    font-size: 27px;
+                }
+            }
+            @media (max-width: 350px) {
+                p {
+                    font-size: 24px;
+                }
+            }
+            @media (max-width: 318px) {
+                p {
+                    font-size: 22px;
+                }
+            }
+            @media (max-width: 302px) {
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+        & .menu { // Déroulé du menu
+            margin-top: 20px;
+            margin-bottom: -20px;
+            display: flex;
+            & .entree { // Entrées
+                transform: translateY(-10%);
+                transition: transform 1200ms ease-in;
+                & #text1 {
+                    border-bottom: 3px solid $terciary-color;
+                    width: 35px;
+                }
+                & p {
+                    font-size: 16px;
+                }
+                & .fricassee { // Première entrée
+                    padding-left: 10px;
+                    margin: 0 10px 10px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: white;
+                    box-shadow: 0px 6px 10px -5px rgba(201,201,201,1);
+                    border-radius: 10px;
+                    height: 60px;
+                    width: 300px;
+                    animation: apparition 1800ms 200ms;
+                    animation-fill-mode: backwards;
+                    overflow: hidden;
+                    &:hover span {
+                        transform: scaleX(1);
+                        .fa-check-circle {
+                            transform: rotate(0deg);
+                        }
+                    }
+                    &:hover .text .prix {
+                        transform: translateX(40px)
+                    }
+                    & .text {
+                        justify-content: space-between;
+                        display: flex;
+                        & .inline {
+                            display: inline;
+                            margin-right: 44px;
+                            & h2 {
+                                font-size: 16px;
+                                margin-bottom: -10px;
+                            }
+                            @media (max-width: 310px) {
+                                & h2 {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                            & p {
+                                font-size: 13px;
+                            }
+                            @media (max-width: 310px) {
+                                & h2 {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                        @media (max-width: 999px) {
+                            .inline {
+                                margin-right: 687px;
+                            }
+                        }
+                        @media (max-width: 768px) {
+                            .inline {
+                                margin-right: 465px;
+                            }
+                        }
+                        @media (max-width: 540px) {
+                            .inline {
+                                margin-right: 242px;
+                            }
+                        }
+                        @media (max-width: 414px) {
+                            .inline {
+                                margin-right: 119px;
+                            }
+                        }
+                        @media (max-width: 411px) {
+                            .inline {
+                                margin-right: 115px;
+                            }
+                        }
+                        @media (max-width: 375px) {
+                            .inline {
+                                margin-right: 80px;
+                            }
+                        }
+                        @media (max-width: 360px) {
+                            .inline {
+                                margin-right: 63px;
+                            }
+                        }
+                        @media (max-width: 320px) {
+                            .inline {
+                                margin-right: 27px;
+                            }
+                        }
+                        @media (max-width: 280px) {
+                            .inline {
+                                margin-right: -14px;
+                            }
+                        }
+                        & .prix {
+                            align-self: flex-end;
+                            transform: translateX(90px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            & h2 {
+                                font-size: 14px; 
+                            }
+                        }
+                    }
+                    & span {
+                        background-color: $terciary-color;
+                        width: 35px;
+                        height: 35px;
+                        transform-origin: right 50%;
+                        transform: scaleX(0);
+                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                        padding-top: 25px;
+                        padding-left: 13px;
+                    }.fa-check-circle {
+                        color: white;
+                        transform: rotate(-360deg);
+                        transition: transform 500ms ease-in-out;
+                        animation-fill-mode: backwards;
+                    }
+                }
+                @media (max-width: 999px) {
+                    .fricassee {
+                        width: auto;
+                    }
+                }
+                & .foie-gras { // Seconde entrée
+                    @extend .fricassee;
+
+                    margin-top: 0px;
+                    animation: apparition 1800ms 500ms;
+                    animation-fill-mode: backwards;
+                    overflow: hidden;
+                    &:hover span {
+                        transform: scaleX(1);
+                        .fa-check-circle {
+                            transform: rotate(0deg);
+                        }
+                    }
+                    &:hover .text .prix {
+                        transform: translateX(40px)
+                    }
+                    & .text {
+                        justify-content: space-between;
+                        display: flex;
+                        & .inline {
+                            display: inline;
+                            margin-right: -4px;
+                            & h2 {
+                                font-size: 16px;
+                                margin-bottom: -10px;
+                            }
+                            @media (max-width: 310px) {
+                                & h2 {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                            & p {
+                                font-size: 13px;
+                            }
+                            @media (max-width: 310px) {
+                                & h2 {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                        @media (max-width: 999px) {
+                            .inline {
+                                margin-right: 638px;
+                            }
+                        }
+                        @media (max-width: 768px) {
+                            .inline {
+                                margin-right: 415px;
+                            }
+                        }
+                        @media (max-width: 540px) {
+                            .inline {
+                                margin-right: 192px;
+                            }
+                        }
+                        @media (max-width: 414px) {
+                            .inline {
+                                margin-right: 69px;
+                            }
+                        }
+                        @media (max-width: 411px) {
+                            .inline {
+                                margin-right: 65px;
+                            }
+                        }
+                        @media (max-width: 375px) {
+                            .inline {
+                                margin-right: 30px;
+                            }
+                        }
+                        @media (max-width: 360px) {
+                            .inline {
+                                margin-right: 16px;
+                            }
+                        }
+                        @media (max-width: 320px) {
+                            .inline {
+                                margin-right: -23px;
+                            }
+                        }
+                        @media (max-width: 280px) {
+                            .inline {
+                                margin-right: -30px;
+                            }
+                        }
+                        & .prix {
+                            align-self: flex-end;
+                            transform: translateX(90px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            & h2 {
+                                font-size: 14px; 
+                            }
+                        }
+                    }
+                    & span {
+                        background-color: $terciary-color;
+                        width: 35px;
+                        height: 35px;
+                        transform-origin: right 50%;
+                        transform: scaleX(0);
+                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                        padding-top: 25px;
+                        padding-left: 13px;
+                    }.fa-check-circle {
+                        color: white;
+                        transform: rotate(-360deg);
+                        transition: transform 500ms ease-in-out;
+                        animation-fill-mode: backwards;
+                    }
+                }
+                & .oeuf { // Troisième entrée
+                    @extend .fricassee;
+                    
+                    margin-top: 0px;
+                    animation: apparition 1800ms 800ms;
+                    animation-fill-mode: backwards;
+                    overflow: hidden;
+                    &:hover span {
+                        transform: scaleX(1);
+                        .fa-check-circle {
+                            transform: rotate(0deg);
+                        }
+                    }
+                    &:hover .text .prix {
+                        transform: translateX(40px)
+                    }
+                    & .text {
+                        justify-content: space-between;
+                        display: flex;
+                        & .inline {
+                            display: inline;
+                            margin-right: -12px;
+                            & h2 {
+                                font-size: 16px;
+                                margin-bottom: -10px;
+                            }
+                            @media (max-width: 310px) {
+                                & h2 {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                            & p {
+                                font-size: 13px;
+                            }
+                            @media (max-width: 320px) {
+                                & p {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                        @media (max-width: 999px) {
+                            .inline {
+                                margin-right: 633px;
+                            }
+                        }
+                        @media (max-width: 768px) {
+                            .inline {
+                                margin-right: 406px;
+                            }
+                        }
+                        @media (max-width: 540px) {
+                            .inline {
+                                margin-right: 184px;
+                            }
+                        }
+                        @media (max-width: 414px) {
+                            .inline {
+                                margin-right: 60px;
+                            }
+                        }
+                        @media (max-width: 411px) {
+                            .inline {
+                                margin-right: 57px;
+                            }
+                        }
+                        @media (max-width: 375px) {
+                            .inline {
+                                margin-right: 24px;
+                            }
+                        }
+                        @media (max-width: 360px) {
+                            .inline {
+                                margin-right: 7px;
+                            }
+                        }
+                        @media (max-width: 320px) {
+                            .inline {
+                                margin-right: -32px;
+                            }
+                        }
+                        @media (max-width: 280px) {
+                            .inline {
+                                margin-right: -16px;
+                            }
+                        }
+                        & .prix {
+                            align-self: flex-end;
+                            transform: translateX(90px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            & h2 {
+                                font-size: 14px; 
+                            }
+                        }
+                    }
+                    & span {
+                        background-color: $terciary-color;
+                        width: 35px;
+                        height: 35px;
+                        transform-origin: right 50%;
+                        transform: scaleX(0);
+                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                        padding-top: 25px;
+                        padding-left: 13px;
+                    }.fa-check-circle {
+                        color: white;
+                        transform: rotate(-360deg);
+                        transition: transform 500ms ease-in-out;
+                        animation-fill-mode: backwards;
+                    }
+                }
+            }
+            & .plats { // Plats
+                transform: translateY(-10%);
+                transition: transform 1200ms ease-in 1400ms;
+                & #text2 {
+                    border-bottom: 3px solid $terciary-color;
+                    width: 35px;
+                }
+                & p {
+                font-size: 16px;
+                }
+                & .filet { // Premier plat
+                    padding-left: 10px;
+                    margin: 0 10px 10px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: white;
+                    box-shadow: 0px 6px 10px -5px rgba(201,201,201,1);
+                    border-radius: 10px;
+                    height: 60px;
+                    width: 300px;
+                    animation: apparition 1800ms 1400ms;
+                    animation-fill-mode: backwards;
+                    overflow: hidden;
+                    &:hover span {
+                        transform: scaleX(1);
+                        .fa-check-circle {
+                            transform: rotate(0deg);
+                        }
+                    }
+                    &:hover .text .prix {
+                        transform: translateX(40px)
+                    }
+                    & .text {
+                        justify-content: space-between;
+                        display: flex;
+                        & .inline {
+                            display: inline;
+                            margin-right: -35px;
+                            & h2 {
+                                font-size: 16px;
+                                margin-bottom: -10px;
+                            }
+                            @media (max-width: 310px) {
+                                & h2 {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                            & p {
+                                font-size: 13px;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                            @media (max-width: 320px) {
+                                p {
+                                    width: 164px
+                                }
+                            }
+                            @media (max-width: 310px) {
+                                & h2 {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                        @media (max-width: 999px) {
+                            .inline {
+                                margin-right: 607px;
+                            }
+                        }
+                        @media (max-width: 768px) {
+                            .inline {
+                                margin-right: 383px;
+                            }
+                        }
+                        @media (max-width: 540px) {
+                            .inline {
+                                margin-right: 158px;
+                            }
+                        }
+                        @media (max-width: 414px) {
+                            .inline {
+                                margin-right: 36px;
+                            }
+                        }
+                        @media (max-width: 411px) {
+                            .inline {
+                                margin-right: 32px;
+                            }
+                        }
+                        @media (max-width: 375px) {
+                            .inline {
+                                margin-right: -2px;
+                            }
+                        }
+                        @media (max-width: 360px) {
+                            .inline {
+                                margin-right: -16px;
+                            }
+                        }
+                        @media (max-width: 320px) {
+                            .inline {
+                                margin-right: -10px;
+                            }
+                        }
+                        @media (max-width: 280px) {
+                            .inline {
+                                margin-right: -42px;
+                            }
+                        }
+                        & .prix {
+                            align-self: flex-end;
+                            transform: translateX(90px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            & h2 {
+                                font-size: 14px; 
+                            }
+                        }
+                    }
+                    & span {
+                        background-color: $terciary-color;
+                        width: 35px;
+                        height: 35px;
+                        transform-origin: right 50%;
+                        transform: scaleX(0);
+                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                        padding-top: 25px;
+                        padding-left: 13px;
+                    }.fa-check-circle {
+                        color: white;
+                        transform: rotate(-360deg);
+                        transition: transform 500ms ease-in-out;
+                        animation-fill-mode: backwards;
+                    }
+                }
+                @media (max-width: 999px) {
+                    .filet {
+                        width: auto;
+                    }
+                }
+                & .parmentier { // Second plat
+                    @extend .filet;
+
+                    animation: apparition 1800ms 1700ms;
+                    animation-fill-mode: backwards;
+                    overflow: hidden;
+                    &:hover span {
+                        transform: scaleX(1);
+                        .fa-check-circle {
+                            transform: rotate(0deg);
+                        }
+                    }
+                    &:hover .text .prix {
+                        transform: translateX(40px)
+                    }
+                    & .text {
+                        justify-content: space-between;
+                        display: flex;
+                        & .inline {
+                            display: inline;
+                            margin-right: -21px;
+                            & h2 {
+                                font-size: 16px;
+                                margin-bottom: -10px;
+                            }
+                            @media (max-width: 310px) {
+                                & h2 {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                            & p {
+                                font-size: 13px;
+                            }
+                            @media (max-width: 310px) {
+                                & h2 {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                        @media (max-width: 999px) {
+                            .inline {
+                                margin-right: 624px;
+                            }
+                        }
+                        @media (max-width: 768px) {
+                            .inline {
+                                margin-right: 395px;
+                            }
+                        }
+                        @media (max-width: 540px) {
+                            .inline {
+                                margin-right: 174px;
+                            }
+                        }
+                        @media (max-width: 414px) {
+                            .inline {
+                                margin-right: 51px;
+                            }
+                        }
+                        @media (max-width: 411px) {
+                            .inline {
+                                margin-right: 47px;
+                            }
+                        }
+                        @media (max-width: 375px) {
+                            .inline {
+                                margin-right: 13px;
+                            }
+                        }
+                        @media (max-width: 360px) {
+                            .inline {
+                                margin-right: 0px;
+                            }
+                        }
+                        @media (max-width: 320px) {
+                            .inline {
+                                margin-right: -40px;
+                            }
+                        }
+                        @media (max-width: 280px) {
+                            .inline {
+                                margin-right: -42px;
+                            }
+                        }
+                        & .prix {
+                            align-self: flex-end;
+                            transform: translateX(90px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            & h2 {
+                                font-size: 14px; 
+                            }
+                        }
+                    }
+                    & span {
+                        background-color: $terciary-color;
+                        width: 35px;
+                        height: 35px;
+                        transform-origin: right 50%;
+                        transform: scaleX(0);
+                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                        padding-top: 25px;
+                        padding-left: 13px;
+                    }.fa-check-circle {
+                        color: white;
+                        transform: rotate(-360deg);
+                        transition: transform 500ms ease-in-out;
+                        animation-fill-mode: backwards;
+                    }
+                }
+                & .turbot { // Troisième plat
+                    @extend .filet;
+                    
+                    animation: apparition 1800ms 2000ms;
+                    animation-fill-mode: backwards;
+                    overflow: hidden;
+                    &:hover span {
+                        transform: scaleX(1);
+                        .fa-check-circle {
+                            transform: rotate(0deg);
+                        }
+                    }
+                    &:hover .text .prix {
+                        transform: translateX(40px)
+                    }
+                    & .text {
+                        justify-content: space-between;
+                        display: flex;
+                        & .inline {
+                            display: inline;
+                            margin-right: 82px;
+                            & h2 {
+                                font-size: 16px;
+                                margin-bottom: -10px;
+                            }
+                            @media (max-width: 310px) {
+                                & h2 {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                            & p {
+                                font-size: 13px;
+                            }
+                            @media (max-width: 310px) {
+                                & h2 {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                        @media (max-width: 999px) {
+                            .inline {
+                                margin-right: 726px;
+                            }
+                        }
+                        @media (max-width: 768px) {
+                            .inline {
+                                margin-right: 500px;
+                            }
+                        }
+                        @media (max-width: 540px) {
+                            .inline {
+                                margin-right: 277px;
+                            }
+                        }
+                        @media (max-width: 414px) {
+                            .inline {
+                                margin-right: 153px;
+                            }
+                        }
+                        @media (max-width: 411px) {
+                            .inline {
+                                margin-right: 150px;
+                            }
+                        }
+                        @media (max-width: 375px) {
+                            .inline {
+                                margin-right: 115px;
+                            }
+                        }
+                        @media (max-width: 360px) {
+                            .inline {
+                                margin-right: 101px;
+                            }
+                        }
+                        @media (max-width: 320px) {
+                            .inline {
+                                margin-right: -1px;
+                            }
+                        }
+                        @media (max-width: 280px) {
+                            .inline {
+                                margin-right: -42px;
+                            }
+                        }
+                        & .prix {
+                            align-self: flex-end;
+                            transform: translateX(90px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            & h2 {
+                                font-size: 14px; 
+                            }
+                        }
+                    }
+                    & span {
+                        background-color: $terciary-color;
+                        width: 35px;
+                        height: 35px;
+                        transform-origin: right 50%;
+                        transform: scaleX(0);
+                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                        padding-top: 25px;
+                        padding-left: 13px;
+                    }.fa-check-circle {
+                        color: white;
+                        transform: rotate(-360deg);
+                        transition: transform 500ms ease-in-out;
+                        animation-fill-mode: backwards;
+                    }
+                }
+            }
+            & .desserts { // Desserts
+                transform: translateY(-10%);
+                transition: transform 1200ms ease-in 2600ms;
+                & #text3 {
+                    border-bottom: 3px solid $terciary-color;
+                    width: 35px;
+                }
+                & p {
+                font-size: 16px;
+                }
+                & .paris { // Premier dessert
+                    padding-left: 10px;
+                    margin: 0px 10px 10px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: white;
+                    box-shadow: 0px 6px 10px -5px rgba(201,201,201,1);
+                    border-radius: 10px;
+                    height: 60px;
+                    width: 300px;
+                    animation: apparition 1800ms 2600ms;
+                    animation-fill-mode: backwards;
+                    overflow: hidden;
+                    &:hover span {
+                        transform: scaleX(1);
+                        .fa-check-circle {
+                            transform: rotate(0deg);
+                        }
+                    }
+                    &:hover .text .prix {
+                        transform: translateX(40px)
+                    }
+                    & .text {
+                        justify-content: space-between;
+                        display: flex;
+                        & .inline {
+                            display: inline;
+                            margin-right: 104px;
+                            & h2 {
+                                font-size: 16px;
+                                margin-bottom: -10px;
+                            }
+                            @media (max-width: 310px) {
+                                & h2 {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                            & p {
+                                font-size: 13px;
+                            }
+                            @media (max-width: 310px) {
+                                & h2 {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                        @media (max-width: 999px) {
+                            .inline {
+                                margin-right: 752px;
+                            }
+                        }
+                        @media (max-width: 768px) {
+                            .inline {
+                                margin-right: 524px;
+                            }
+                        }
+                        @media (max-width: 540px) {
+                            .inline {
+                                margin-right: 303px;
+                            }
+                        }
+                        @media (max-width: 414px) {
+                            .inline {
+                                margin-right: 177px;
+                            }
+                        }
+                        @media (max-width: 411px) {
+                            .inline {
+                                margin-right: 174px;
+                            }
+                        }
+                        @media (max-width: 375px) {
+                            .inline {
+                                margin-right: 140px;
+                            }
+                        }
+                        @media (max-width: 360px) {
+                            .inline {
+                                margin-right: 124px;
+                            }
+                        }
+                        @media (max-width: 320px) {
+                            .inline {
+                                margin-right: 87px;
+                            }
+                        }
+                        @media (max-width: 280px) {
+                            .inline {
+                                margin-right: -13px;
+                            }
+                        }
+                        & .prix {
+                            align-self: flex-end;
+                            transform: translateX(90px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            & h2 {
+                                font-size: 14px; 
+                            }
+                        }
+                    }
+                    & span {
+                        background-color: $terciary-color;
+                        width: 35px;
+                        height: 35px;
+                        transform-origin: right 50%;
+                        transform: scaleX(0);
+                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                        padding-top: 25px;
+                        padding-left: 13px;
+                    }.fa-check-circle {
+                        color: white;
+                        transform: rotate(-360deg);
+                        transition: transform 500ms ease-in-out;
+                        animation-fill-mode: backwards;
+                    }
+                }
+                @media (max-width: 999px) {
+                    .paris {
+                        width: auto;
+                    }
+                }
+                & .macaron { // Second dessert
+                    padding-left: 10px;
+                    margin: 0px 10px 10px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: white;
+                    box-shadow: 0px 6px 10px -5px rgba(201,201,201,1);
+                    border-radius: 10px;
+                    height: 60px;
+                    width: 300px;
+                    animation: apparition 1800ms 2900ms;
+                    animation-fill-mode: backwards;
+                    overflow: hidden;
+                    &:hover span {
+                        transform: scaleX(1);
+                        .fa-check-circle {
+                            transform: rotate(0deg);
+                        }
+                    }
+                    &:hover .text .prix {
+                        transform: translateX(40px)
+                    }
+                    & .text {
+                        justify-content: space-between;
+                        display: flex;
+                        & .inline {
+                            display: inline;
+                            margin-right: -43px;
+                            & h2 {
+                                font-size: 16px;
+                                margin-bottom: -10px;
+                            }
+                            @media (max-width: 320px) {
+                                & h2 {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                            & p {
+                                font-size: 13px;
+                            }
+                            @media (max-width: 320px) {
+                                & p {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                        @media (max-width: 999px) {
+                            .inline {
+                                margin-right: 604px;
+                            }
+                        }
+                        @media (max-width: 768px) {
+                            .inline {
+                                margin-right: 376px;
+                            }
+                        }
+                        @media (max-width: 540px) {
+                            .inline {
+                                margin-right: 155px;
+                            }
+                        }
+                        @media (max-width: 414px) {
+                            .inline {
+                                margin-right: 29px;
+                            }
+                        }
+                        @media (max-width: 411px) {
+                            .inline {
+                                margin-right: 27px;
+                            }
+                        }
+                        @media (max-width: 375px) {
+                            .inline {
+                                margin-right: -8px;
+                            }
+                        }
+                        @media (max-width: 360px) {
+                            .inline {
+                                margin-right: -22px;
+                            }
+                        }
+                        @media (max-width: 320px) {
+                            .inline {
+                                margin-right: 27px;
+                            }
+                        }
+                        @media (max-width: 280px) {
+                            .inline {
+                                margin-right: -13px;
+                            }
+                        }
+                        & .prix {
+                            align-self: flex-end;
+                            transform: translateX(90px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            & h2 {
+                                font-size: 14px; 
+                            }
+                        }
+                    }
+                    & span {
+                        background-color: $terciary-color;
+                        width: 35px;
+                        height: 35px;
+                        transform-origin: right 50%;
+                        transform: scaleX(0);
+                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                        padding-top: 25px;
+                        padding-left: 13px;
+                    }.fa-check-circle {
+                        color: white;
+                        transform: rotate(-360deg);
+                        transition: transform 500ms ease-in-out;
+                        animation-fill-mode: backwards;
+                    }
+                }
+                @media (max-width: 999px) {
+                    .macaron {
+                        width: auto;
+                    }
+                }
+                & .mousse { // Troisième dessert
+                    padding-left: 10px;
+                    margin: 0px 10px 10px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    background-color: white;
+                    box-shadow: 0px 6px 10px -5px rgba(201,201,201,1);
+                    border-radius: 10px;
+                    height: 60px;
+                    width: 300px;
+                    animation: apparition 1800ms 3200ms;
+                    animation-fill-mode: backwards;
+                    overflow: hidden;
+                    &:hover span {
+                        transform: scaleX(1);
+                        .fa-check-circle {
+                            transform: rotate(0deg);
+                        }
+                    }
+                    &:hover .text .prix {
+                        transform: translateX(40px)
+                    }
+                    & .text {
+                        justify-content: space-between;
+                        display: flex;
+                        & .inline {
+                            display: inline;
+                            margin-right: -25px;
+                            & h2 {
+                                font-size: 16px;
+                                margin-bottom: -10px;
+                            }
+                            @media (max-width: 310px) {
+                                & h2 {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                            & p {
+                                font-size: 13px;
+                            }
+                            @media (max-width: 320px) {
+                                & p {
+                                    width: 138px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                        @media (max-width: 999px) {
+                            .inline {
+                                margin-right: 621px;
+                            }
+                        }
+                        @media (max-width: 768px) {
+                            .inline {
+                                margin-right: 394px;
+                            }
+                        }
+                        @media (max-width: 540px) {
+                            .inline {
+                                margin-right: 172px;
+                            }
+                        }
+                        @media (max-width: 414px) {
+                            .inline {
+                                margin-right: 47px;
+                            }
+                        }
+                        @media (max-width: 411px) {
+                            .inline {
+                                margin-right: 44px;
+                            }
+                        }
+                        @media (max-width: 375px) {
+                            .inline {
+                                margin-right: 10px;
+                            }
+                        }
+                        @media (max-width: 360px) {
+                            .inline {
+                                margin-right: -6px;
+                            }
+                        }
+                        @media (max-width: 320px) {
+                            .inline {
+                                margin-right: 28px;
+                            }
+                        }
+                        @media (max-width: 280px) {
+                            .inline {
+                                margin-right: -13px;
+                            }
+                        }
+                        & .prix {
+                            align-self: flex-end;
+                            transform: translateX(90px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            & h2 {
+                                font-size: 14px; 
+                            }
+                        }
+                    }
+                    & span {
+                        background-color: $terciary-color;
+                        width: 35px;
+                        height: 35px;
+                        transform-origin: right 50%;
+                        transform: scaleX(0);
+                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                        padding-top: 25px;
+                        padding-left: 13px;
+                    }.fa-check-circle {
+                        color: white;
+                        transform: rotate(-360deg);
+                        transition: transform 500ms ease-in-out;
+                        animation-fill-mode: backwards;
+                    }
+                }
+                @media (max-width: 999px) {
+                    .mousse {
+                        width: auto;
+                    }
+                }
+            }
+        }
+        @media (max-width: 999px) {
+            .menu {
+                display: initial
+            }
+        }
+        & .btn {
+            & a {
+                background: linear-gradient($secondary-color, 50%, $primary-color);
+                box-shadow: 0px 10px 16px -10px rgba(97,97,97,0.83);
+                border-radius: 20px;
+                padding: 14px 20px 14px 20px;
+                width: 6%;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                color: #f5f5f5;
+                font-size: 13px;
+                text-decoration: none;
+                &:hover {
+                    filter: brightness(1.10);
+                    box-shadow: 0px 10px 16px -5px rgba(97,97,97,0.83);
+                }
+            }
+        }
+    }
+    @media (max-width: 999px) {
+        .carte {
+            height: 915px;
+            width: 98%;
+        }
+    }
+}
+.menu + a {
+    
+    text-decoration: none;
+}
+@media (max-width: 999px) {
+    footer {
+        width: 98%;
+    }
+}

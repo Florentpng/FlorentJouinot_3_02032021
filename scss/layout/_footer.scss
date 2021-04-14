@@ -1,0 +1,30 @@
+footer {
+    padding: 2px 0 0 20px;
+    margin-top: -15px;
+    background-color: $footer-back;
+    height: 170px;
+    & p {
+        font-family: Shrikhand;
+        color: white;
+        font-size: 17px;
+    }
+    & ul {
+        & li {
+            list-style-type: none;
+            text-decoration: none;
+            margin: 0 0 5px -35px;
+            & a{
+                text-decoration: none;
+                color: white;
+            }
+            & .fa-utensils {
+                margin-right: 17px;
+                color: white;
+            }
+            & .fa-handshake {
+                margin-right: 10px;
+                color: white;
+            }
+        }
+    }
+}

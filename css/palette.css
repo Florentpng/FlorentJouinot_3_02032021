@@ -1,0 +1,1359 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@keyframes apparition {
+  0% {
+    transform: translateY(30%);
+    opacity: 0%;
+  }
+  80% {
+    transform: translateY(0);
+    opacity: 50%;
+  }
+  90% {
+    transform: translateY(-15%);
+    opacity: 70%;
+  }
+  100% {
+    transform: translateY(-30%);
+    opacity: 100%;
+  }
+}
+@keyframes marquage {
+  0% {
+    transform: translateX(100px);
+  }
+  100% {
+    transform: translate(0px, 0);
+  }
+}
+@keyframes spinner {
+  100% {
+    transform: scale(0, 0);
+  }
+}
+@keyframes animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+footer {
+  padding: 2px 0 0 20px;
+  margin-top: -15px;
+  background-color: #363636;
+  height: 170px;
+}
+footer p {
+  font-family: Shrikhand;
+  color: white;
+  font-size: 17px;
+}
+footer ul li {
+  list-style-type: none;
+  text-decoration: none;
+  margin: 0 0 5px -35px;
+}
+footer ul li a {
+  text-decoration: none;
+  color: white;
+}
+footer ul li .fa-utensils {
+  margin-right: 17px;
+  color: white;
+}
+footer ul li .fa-handshake {
+  margin-right: 10px;
+  color: white;
+}
+
+header {
+  background-color: #f7f7f7;
+  border-radius: 15px 15px 0 0;
+  display: flex;
+  padding: 10px 0 0 20px;
+}
+header .fa-arrow-left {
+  color: black;
+  margin: 20px 30px 0 0;
+}
+@media (max-width: 360px) {
+  header .fa-arrow-left {
+    margin-top: 15px;
+  }
+}
+@media (max-width: 300px) {
+  header .fa-arrow-left {
+    margin-top: 10px;
+  }
+}
+header .logo {
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+header .logo #logo {
+  width: 55%;
+}
+
+@media (max-width: 999px) {
+  header {
+    width: 98%;
+  }
+}
+.centre .image #restaurant {
+  width: 660px;
+  margin-left: 175px;
+}
+@media (max-width: 999px) {
+  .centre .image #restaurant {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+.centre .carte {
+  width: auto;
+  height: 415px;
+  background-color: #f7f7f7;
+  border-radius: 0 0 15px 15px;
+  padding-left: 20px;
+}
+.centre .carte .tete {
+  display: flex;
+}
+.centre .carte .tete #coeur-bord {
+  padding-top: 17px;
+  margin-right: -21px;
+  position: relative;
+  z-index: 2;
+  height: 17px;
+}
+.centre .carte .tete #coeur-bord:hover + #coeur {
+  opacity: 1;
+}
+.centre .carte .tete #coeur {
+  padding-top: 17px;
+  cursor: default;
+  position: relative;
+  z-index: 1;
+  height: 17px;
+  opacity: 0;
+  transition: opacity 1000ms;
+  background: linear-gradient(#FF79DA, 50%, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.centre .carte .tete p {
+  font-family: Shrikhand;
+  font-size: 30px;
+  margin: 5px 20px 0 0;
+}
+@media (max-width: 999px) {
+  .centre .carte .tete p {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 372px) {
+  .centre .carte .tete p {
+    font-size: 27px;
+  }
+}
+@media (max-width: 350px) {
+  .centre .carte .tete p {
+    font-size: 24px;
+  }
+}
+@media (max-width: 318px) {
+  .centre .carte .tete p {
+    font-size: 22px;
+  }
+}
+@media (max-width: 302px) {
+  .centre .carte .tete p {
+    font-size: 20px;
+  }
+}
+.centre .carte .menu {
+  margin-top: 20px;
+  margin-bottom: -20px;
+  display: flex;
+}
+.centre .carte .menu .entree {
+  transform: translateY(-10%);
+  transition: transform 1200ms ease-in;
+}
+.centre .carte .menu .entree #text1 {
+  border-bottom: 3px solid #99E2D0;
+  width: 35px;
+}
+.centre .carte .menu .entree p {
+  font-size: 16px;
+}
+.centre .carte .menu .entree .fricassee, .centre .carte .menu .entree .oeuf, .centre .carte .menu .entree .foie-gras {
+  padding-left: 10px;
+  margin: 0 10px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 6px 10px -5px #c9c9c9;
+  border-radius: 10px;
+  height: 60px;
+  width: 300px;
+  animation: apparition 1800ms 200ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .entree .fricassee:hover span, .centre .carte .menu .entree .oeuf:hover span, .centre .carte .menu .entree .foie-gras:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .entree .fricassee:hover span .fa-check-circle, .centre .carte .menu .entree .oeuf:hover span .fa-check-circle, .centre .carte .menu .entree .foie-gras:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .entree .fricassee:hover .text .prix, .centre .carte .menu .entree .oeuf:hover .text .prix, .centre .carte .menu .entree .foie-gras:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .entree .fricassee .text, .centre .carte .menu .entree .oeuf .text, .centre .carte .menu .entree .foie-gras .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .entree .fricassee .text .inline, .centre .carte .menu .entree .oeuf .text .inline, .centre .carte .menu .entree .foie-gras .text .inline {
+  display: inline;
+  margin-right: 44px;
+}
+.centre .carte .menu .entree .fricassee .text .inline h2, .centre .carte .menu .entree .oeuf .text .inline h2, .centre .carte .menu .entree .foie-gras .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .entree .fricassee .text .inline h2, .centre .carte .menu .entree .oeuf .text .inline h2, .centre .carte .menu .entree .foie-gras .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .entree .fricassee .text .inline p, .centre .carte .menu .entree .oeuf .text .inline p, .centre .carte .menu .entree .foie-gras .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .entree .fricassee .text .inline h2, .centre .carte .menu .entree .oeuf .text .inline h2, .centre .carte .menu .entree .foie-gras .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .entree .fricassee .text .inline, .centre .carte .menu .entree .oeuf .text .inline, .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: 687px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .entree .fricassee .text .inline, .centre .carte .menu .entree .oeuf .text .inline, .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: 465px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .entree .fricassee .text .inline, .centre .carte .menu .entree .oeuf .text .inline, .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: 242px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .entree .fricassee .text .inline, .centre .carte .menu .entree .oeuf .text .inline, .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: 119px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .entree .fricassee .text .inline, .centre .carte .menu .entree .oeuf .text .inline, .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: 115px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .entree .fricassee .text .inline, .centre .carte .menu .entree .oeuf .text .inline, .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: 80px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .entree .fricassee .text .inline, .centre .carte .menu .entree .oeuf .text .inline, .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: 63px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .entree .fricassee .text .inline, .centre .carte .menu .entree .oeuf .text .inline, .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: 27px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .entree .fricassee .text .inline, .centre .carte .menu .entree .oeuf .text .inline, .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: -14px;
+  }
+}
+.centre .carte .menu .entree .fricassee .text .prix, .centre .carte .menu .entree .oeuf .text .prix, .centre .carte .menu .entree .foie-gras .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .entree .fricassee .text .prix h2, .centre .carte .menu .entree .oeuf .text .prix h2, .centre .carte .menu .entree .foie-gras .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .entree .fricassee span, .centre .carte .menu .entree .oeuf span, .centre .carte .menu .entree .foie-gras span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .entree .fricassee .fa-check-circle, .centre .carte .menu .entree .oeuf .fa-check-circle, .centre .carte .menu .entree .foie-gras .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .entree .fricassee, .centre .carte .menu .entree .oeuf, .centre .carte .menu .entree .foie-gras {
+    width: auto;
+  }
+}
+.centre .carte .menu .entree .foie-gras {
+  margin-top: 0px;
+  animation: apparition 1800ms 500ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .entree .foie-gras:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .entree .foie-gras:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .entree .foie-gras:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .entree .foie-gras .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .entree .foie-gras .text .inline {
+  display: inline;
+  margin-right: -4px;
+}
+.centre .carte .menu .entree .foie-gras .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .entree .foie-gras .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .entree .foie-gras .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .entree .foie-gras .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: 638px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: 415px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: 192px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: 69px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: 65px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: 16px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: -23px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .entree .foie-gras .text .inline {
+    margin-right: -30px;
+  }
+}
+.centre .carte .menu .entree .foie-gras .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .entree .foie-gras .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .entree .foie-gras span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .entree .foie-gras .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+.centre .carte .menu .entree .oeuf {
+  margin-top: 0px;
+  animation: apparition 1800ms 800ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .entree .oeuf:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .entree .oeuf:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .entree .oeuf:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .entree .oeuf .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .entree .oeuf .text .inline {
+  display: inline;
+  margin-right: -12px;
+}
+.centre .carte .menu .entree .oeuf .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .entree .oeuf .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .entree .oeuf .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .entree .oeuf .text .inline p {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .entree .oeuf .text .inline {
+    margin-right: 633px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .entree .oeuf .text .inline {
+    margin-right: 406px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .entree .oeuf .text .inline {
+    margin-right: 184px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .entree .oeuf .text .inline {
+    margin-right: 60px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .entree .oeuf .text .inline {
+    margin-right: 57px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .entree .oeuf .text .inline {
+    margin-right: 24px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .entree .oeuf .text .inline {
+    margin-right: 7px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .entree .oeuf .text .inline {
+    margin-right: -32px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .entree .oeuf .text .inline {
+    margin-right: -16px;
+  }
+}
+.centre .carte .menu .entree .oeuf .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .entree .oeuf .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .entree .oeuf span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .entree .oeuf .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+.centre .carte .menu .plats {
+  transform: translateY(-10%);
+  transition: transform 1200ms ease-in 1400ms;
+}
+.centre .carte .menu .plats #text2 {
+  border-bottom: 3px solid #99E2D0;
+  width: 35px;
+}
+.centre .carte .menu .plats p {
+  font-size: 16px;
+}
+.centre .carte .menu .plats .filet, .centre .carte .menu .plats .turbot, .centre .carte .menu .plats .parmentier {
+  padding-left: 10px;
+  margin: 0 10px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 6px 10px -5px #c9c9c9;
+  border-radius: 10px;
+  height: 60px;
+  width: 300px;
+  animation: apparition 1800ms 1400ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .plats .filet:hover span, .centre .carte .menu .plats .turbot:hover span, .centre .carte .menu .plats .parmentier:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .plats .filet:hover span .fa-check-circle, .centre .carte .menu .plats .turbot:hover span .fa-check-circle, .centre .carte .menu .plats .parmentier:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .plats .filet:hover .text .prix, .centre .carte .menu .plats .turbot:hover .text .prix, .centre .carte .menu .plats .parmentier:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .plats .filet .text, .centre .carte .menu .plats .turbot .text, .centre .carte .menu .plats .parmentier .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .plats .filet .text .inline, .centre .carte .menu .plats .turbot .text .inline, .centre .carte .menu .plats .parmentier .text .inline {
+  display: inline;
+  margin-right: -35px;
+}
+.centre .carte .menu .plats .filet .text .inline h2, .centre .carte .menu .plats .turbot .text .inline h2, .centre .carte .menu .plats .parmentier .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .plats .filet .text .inline h2, .centre .carte .menu .plats .turbot .text .inline h2, .centre .carte .menu .plats .parmentier .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .plats .filet .text .inline p, .centre .carte .menu .plats .turbot .text .inline p, .centre .carte .menu .plats .parmentier .text .inline p {
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .plats .filet .text .inline p, .centre .carte .menu .plats .turbot .text .inline p, .centre .carte .menu .plats .parmentier .text .inline p {
+    width: 164px;
+  }
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .plats .filet .text .inline h2, .centre .carte .menu .plats .turbot .text .inline h2, .centre .carte .menu .plats .parmentier .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .plats .filet .text .inline, .centre .carte .menu .plats .turbot .text .inline, .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: 607px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .plats .filet .text .inline, .centre .carte .menu .plats .turbot .text .inline, .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: 383px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .plats .filet .text .inline, .centre .carte .menu .plats .turbot .text .inline, .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: 158px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .plats .filet .text .inline, .centre .carte .menu .plats .turbot .text .inline, .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: 36px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .plats .filet .text .inline, .centre .carte .menu .plats .turbot .text .inline, .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: 32px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .plats .filet .text .inline, .centre .carte .menu .plats .turbot .text .inline, .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: -2px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .plats .filet .text .inline, .centre .carte .menu .plats .turbot .text .inline, .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: -16px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .plats .filet .text .inline, .centre .carte .menu .plats .turbot .text .inline, .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: -10px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .plats .filet .text .inline, .centre .carte .menu .plats .turbot .text .inline, .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: -42px;
+  }
+}
+.centre .carte .menu .plats .filet .text .prix, .centre .carte .menu .plats .turbot .text .prix, .centre .carte .menu .plats .parmentier .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .plats .filet .text .prix h2, .centre .carte .menu .plats .turbot .text .prix h2, .centre .carte .menu .plats .parmentier .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .plats .filet span, .centre .carte .menu .plats .turbot span, .centre .carte .menu .plats .parmentier span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .plats .filet .fa-check-circle, .centre .carte .menu .plats .turbot .fa-check-circle, .centre .carte .menu .plats .parmentier .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .plats .filet, .centre .carte .menu .plats .turbot, .centre .carte .menu .plats .parmentier {
+    width: auto;
+  }
+}
+.centre .carte .menu .plats .parmentier {
+  animation: apparition 1800ms 1700ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .plats .parmentier:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .plats .parmentier:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .plats .parmentier:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .plats .parmentier .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .plats .parmentier .text .inline {
+  display: inline;
+  margin-right: -21px;
+}
+.centre .carte .menu .plats .parmentier .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .plats .parmentier .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .plats .parmentier .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .plats .parmentier .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: 624px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: 395px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: 174px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: 51px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: 47px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: 13px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: -40px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .plats .parmentier .text .inline {
+    margin-right: -42px;
+  }
+}
+.centre .carte .menu .plats .parmentier .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .plats .parmentier .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .plats .parmentier span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .plats .parmentier .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+.centre .carte .menu .plats .turbot {
+  animation: apparition 1800ms 2000ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .plats .turbot:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .plats .turbot:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .plats .turbot:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .plats .turbot .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .plats .turbot .text .inline {
+  display: inline;
+  margin-right: 82px;
+}
+.centre .carte .menu .plats .turbot .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .plats .turbot .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .plats .turbot .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .plats .turbot .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .plats .turbot .text .inline {
+    margin-right: 726px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .plats .turbot .text .inline {
+    margin-right: 500px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .plats .turbot .text .inline {
+    margin-right: 277px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .plats .turbot .text .inline {
+    margin-right: 153px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .plats .turbot .text .inline {
+    margin-right: 150px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .plats .turbot .text .inline {
+    margin-right: 115px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .plats .turbot .text .inline {
+    margin-right: 101px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .plats .turbot .text .inline {
+    margin-right: -1px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .plats .turbot .text .inline {
+    margin-right: -42px;
+  }
+}
+.centre .carte .menu .plats .turbot .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .plats .turbot .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .plats .turbot span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .plats .turbot .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+.centre .carte .menu .desserts {
+  transform: translateY(-10%);
+  transition: transform 1200ms ease-in 2600ms;
+}
+.centre .carte .menu .desserts #text3 {
+  border-bottom: 3px solid #99E2D0;
+  width: 35px;
+}
+.centre .carte .menu .desserts p {
+  font-size: 16px;
+}
+.centre .carte .menu .desserts .paris {
+  padding-left: 10px;
+  margin: 0px 10px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 6px 10px -5px #c9c9c9;
+  border-radius: 10px;
+  height: 60px;
+  width: 300px;
+  animation: apparition 1800ms 2600ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .desserts .paris:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .desserts .paris:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .desserts .paris:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .desserts .paris .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .desserts .paris .text .inline {
+  display: inline;
+  margin-right: 104px;
+}
+.centre .carte .menu .desserts .paris .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .desserts .paris .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .desserts .paris .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .desserts .paris .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .desserts .paris .text .inline {
+    margin-right: 752px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .desserts .paris .text .inline {
+    margin-right: 524px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .desserts .paris .text .inline {
+    margin-right: 303px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .desserts .paris .text .inline {
+    margin-right: 177px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .desserts .paris .text .inline {
+    margin-right: 174px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .desserts .paris .text .inline {
+    margin-right: 140px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .desserts .paris .text .inline {
+    margin-right: 124px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .desserts .paris .text .inline {
+    margin-right: 87px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .desserts .paris .text .inline {
+    margin-right: -13px;
+  }
+}
+.centre .carte .menu .desserts .paris .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .desserts .paris .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .desserts .paris span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .desserts .paris .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .desserts .paris {
+    width: auto;
+  }
+}
+.centre .carte .menu .desserts .macaron {
+  padding-left: 10px;
+  margin: 0px 10px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 6px 10px -5px #c9c9c9;
+  border-radius: 10px;
+  height: 60px;
+  width: 300px;
+  animation: apparition 1800ms 2900ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .desserts .macaron:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .desserts .macaron:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .desserts .macaron:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .desserts .macaron .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .desserts .macaron .text .inline {
+  display: inline;
+  margin-right: -43px;
+}
+.centre .carte .menu .desserts .macaron .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .desserts .macaron .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .desserts .macaron .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .desserts .macaron .text .inline p {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .desserts .macaron .text .inline {
+    margin-right: 604px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .desserts .macaron .text .inline {
+    margin-right: 376px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .desserts .macaron .text .inline {
+    margin-right: 155px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .desserts .macaron .text .inline {
+    margin-right: 29px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .desserts .macaron .text .inline {
+    margin-right: 27px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .desserts .macaron .text .inline {
+    margin-right: -8px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .desserts .macaron .text .inline {
+    margin-right: -22px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .desserts .macaron .text .inline {
+    margin-right: 27px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .desserts .macaron .text .inline {
+    margin-right: -13px;
+  }
+}
+.centre .carte .menu .desserts .macaron .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .desserts .macaron .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .desserts .macaron span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .desserts .macaron .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .desserts .macaron {
+    width: auto;
+  }
+}
+.centre .carte .menu .desserts .mousse {
+  padding-left: 10px;
+  margin: 0px 10px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0px 6px 10px -5px #c9c9c9;
+  border-radius: 10px;
+  height: 60px;
+  width: 300px;
+  animation: apparition 1800ms 3200ms;
+  animation-fill-mode: backwards;
+  overflow: hidden;
+}
+.centre .carte .menu .desserts .mousse:hover span {
+  transform: scaleX(1);
+}
+.centre .carte .menu .desserts .mousse:hover span .fa-check-circle {
+  transform: rotate(0deg);
+}
+.centre .carte .menu .desserts .mousse:hover .text .prix {
+  transform: translateX(40px);
+}
+.centre .carte .menu .desserts .mousse .text {
+  justify-content: space-between;
+  display: flex;
+}
+.centre .carte .menu .desserts .mousse .text .inline {
+  display: inline;
+  margin-right: -25px;
+}
+.centre .carte .menu .desserts .mousse .text .inline h2 {
+  font-size: 16px;
+  margin-bottom: -10px;
+}
+@media (max-width: 310px) {
+  .centre .carte .menu .desserts .mousse .text .inline h2 {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+.centre .carte .menu .desserts .mousse .text .inline p {
+  font-size: 13px;
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .desserts .mousse .text .inline p {
+    width: 138px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .desserts .mousse .text .inline {
+    margin-right: 621px;
+  }
+}
+@media (max-width: 768px) {
+  .centre .carte .menu .desserts .mousse .text .inline {
+    margin-right: 394px;
+  }
+}
+@media (max-width: 540px) {
+  .centre .carte .menu .desserts .mousse .text .inline {
+    margin-right: 172px;
+  }
+}
+@media (max-width: 414px) {
+  .centre .carte .menu .desserts .mousse .text .inline {
+    margin-right: 47px;
+  }
+}
+@media (max-width: 411px) {
+  .centre .carte .menu .desserts .mousse .text .inline {
+    margin-right: 44px;
+  }
+}
+@media (max-width: 375px) {
+  .centre .carte .menu .desserts .mousse .text .inline {
+    margin-right: 10px;
+  }
+}
+@media (max-width: 360px) {
+  .centre .carte .menu .desserts .mousse .text .inline {
+    margin-right: -6px;
+  }
+}
+@media (max-width: 320px) {
+  .centre .carte .menu .desserts .mousse .text .inline {
+    margin-right: 28px;
+  }
+}
+@media (max-width: 280px) {
+  .centre .carte .menu .desserts .mousse .text .inline {
+    margin-right: -13px;
+  }
+}
+.centre .carte .menu .desserts .mousse .text .prix {
+  align-self: flex-end;
+  transform: translateX(90px);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+}
+.centre .carte .menu .desserts .mousse .text .prix h2 {
+  font-size: 14px;
+}
+.centre .carte .menu .desserts .mousse span {
+  background-color: #99E2D0;
+  width: 35px;
+  height: 35px;
+  transform-origin: right 50%;
+  transform: scaleX(0);
+  transition: transform 1000ms cubic-bezier(0.32, 0, 0.07, 1);
+  padding-top: 25px;
+  padding-left: 13px;
+}
+.centre .carte .menu .desserts .mousse .fa-check-circle {
+  color: white;
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+  animation-fill-mode: backwards;
+}
+@media (max-width: 999px) {
+  .centre .carte .menu .desserts .mousse {
+    width: auto;
+  }
+}
+@media (max-width: 999px) {
+  .centre .carte .menu {
+    display: initial;
+  }
+}
+.centre .carte .btn a {
+  background: linear-gradient(#FF79DA, 50%, #9356DC);
+  box-shadow: 0px 10px 16px -10px rgba(97, 97, 97, 0.83);
+  border-radius: 20px;
+  padding: 14px 20px 14px 20px;
+  width: 6%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #f5f5f5;
+  font-size: 13px;
+  text-decoration: none;
+}
+.centre .carte .btn a:hover {
+  filter: brightness(1.1);
+  box-shadow: 0px 10px 16px -5px rgba(97, 97, 97, 0.83);
+}
+@media (max-width: 999px) {
+  .centre .carte {
+    height: 915px;
+    width: 98%;
+  }
+}
+
+.menu + a {
+  text-decoration: none;
+}
+
+@media (max-width: 999px) {
+  footer {
+    width: 98%;
+  }
+}
+
+/*# sourceMappingURL=palette.css.map */
