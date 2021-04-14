@@ -516,7 +516,7 @@ header .logo #logo {
 }
 @media (max-width: 320px) {
   .centre .carte .menu .entree .oeuf .text .inline {
-    margin-right: -32px;
+    margin-right: 27px;
   }
 }
 @media (max-width: 280px) {
