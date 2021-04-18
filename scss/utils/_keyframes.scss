@@ -40,4 +40,27 @@
     100% {
       transform: rotate(360deg);
     }
-  }
+}
+@keyframes reduction {
+    from {
+        width: 75%;
+    }
+    40% {
+        width: 75%;
+    }
+    to {
+        width: 70%;
+        
+    }
+}
+@keyframes refresh {
+    from {
+        margin-right: 4px;
+    }
+    50% {
+        margin-right: 3px;
+    }
+    to {
+        margin-right: 4px;
+    }
+}
