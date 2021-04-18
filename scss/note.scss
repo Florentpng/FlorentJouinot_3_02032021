@@ -34,51 +34,12 @@ header {
 @media (max-width: 999px) {
     header {
         width: 98%;
-    }
-}
-@media (max-width: 999px) {
-    .inline {
-        margin-right: 619px;
-    }
-}
-@media (max-width: 768px) {
-    .inline {
-        margin-right: 396px;
-    }
-}
-@media (max-width: 540px) {
-    .inline {
-        margin-right: 173px;
-    }
-}
-@media (max-width: 414px) {
-    .inline {
-        margin-right: 48px;
-    }
-}
-@media (max-width: 411px) {
-    .inline {
-        margin-right: 43px;
-    }
-}
-@media (max-width: 375px) {
-    .inline {
-        margin-right: 8px;
-    }
-}
-@media (max-width: 360px) {
-    .inline {
-        margin-right: -4px;
+        background-color: initial;
     }
 }
 @media (max-width: 320px) {
-    .inline {
-        margin-right: -45px;
-    }
-}
-@media (max-width: 280px) {
-    .inline {
-        margin-right: -83px;
+    header {
+        width: 95%;
     }
 }
 // Centre de la page
@@ -91,11 +52,32 @@ header {
         }
         @media (max-width: 999px) {
             #restaurant {
-                width: 100%;
-                height: auto;
-                max-height: 600px;
-                max-width: 650px;
-                margin-left: 0px;
+                width: 96%;
+                height: 96%;
+                margin-left: 2px;
+                margin-top: -55%;
+                position: absolute;
+            }
+        }
+        @media (max-width: 500px) {
+            #restaurant {
+                height: 77%;
+            }
+        }
+        @media (max-width: 385px) {
+            #restaurant {
+                height: 70%;
+            }
+        }
+        @media (max-width: 330px) {
+            #restaurant {
+                height: 62%;
+            }
+        }
+        @media (max-width: 320px) {
+            #restaurant {
+                margin-left: 1px;
+                margin-top: -54%;
             }
         }
     }
@@ -173,7 +155,7 @@ header {
                     width: 35px;
                 }
                 & p {
-                font-size: 16px;
+                    font-size: 16px;
                 }
                 & .ravioles { // Première entrée
                     padding-left: 10px;
@@ -183,123 +165,83 @@ header {
                     background-color: white;
                     box-shadow: 0px 6px 10px -5px rgba(201,201,201,1);
                     border-radius: 10px;
-                    height: 60px;
-                    width: 300px;
                     animation: apparition 1800ms 200ms;
                     animation-fill-mode: backwards;
                     overflow: hidden;
+                    & .gauche {         
+                        width: 63%;
+                        & h2 {
+                            font-size: 16px;
+                            margin-bottom: -10px;
+                            margin-right: 4px;
+                            white-space: nowrap; 
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 15px;
+                            }
+                        }
+                        & p {
+                            font-size: 13px;
+                            white-space: nowrap;
+                        }
+                        @media (max-width: 299px) {
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    & .droite {
+                        display: flex;
+                        & h2 {
+                            font-size: 14px;
+                            margin-top: 35px; 
+                            transform: translateX(38px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            margin-right: 4px;
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 13px;
+                            }
+                        }
+                        & span {
+                            background-color: $terciary-color;
+                            width: 32px;
+                            height: 39px;
+                            transform-origin: right 50%;
+                            transform: scaleX(0);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            padding-top: 24px;
+                            padding-left: 9px;
+                            
+                        }
+                        & .fa-check-circle {
+                            color: white;
+                            transform: rotate(-360deg);
+                            transition: transform 500ms ease-in-out;
+                            animation-fill-mode: backwards;
+                        }
+                    }
                     &:hover span {
                         transform: scaleX(1);
                         .fa-check-circle {
                             transform: rotate(0deg);
                         }
                     }
-                    &:hover .text .prix {
-                        transform: translateX(40px)
+                    &:hover .droite h2 {
+                        transform: translateX(0px)
                     }
-                    & .text {
-                        justify-content: space-between;
-                        display: flex;
-                        & .inline {
-                            display: inline;
-                            margin-right: -24px;
-                            & h2 {
-                                font-size: 16px;
-                                margin-bottom: -10px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                            & p {
-                                font-size: 13px;
-                            }
-                            @media (max-width: 320px) {
-                                & p {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                        }
-                        @media (max-width: 999px) {
-                            .inline {
-                                margin-right: 619px;
-                            }
-                        }
-                        @media (max-width: 768px) {
-                            .inline {
-                                margin-right: 396px;
-                            }
-                        }
-                        @media (max-width: 540px) {
-                            .inline {
-                                margin-right: 173px;
-                            }
-                        }
-                        @media (max-width: 414px) {
-                            .inline {
-                                margin-right: 48px;
-                            }
-                        }
-                        @media (max-width: 411px) {
-                            .inline {
-                                margin-right: 43px;
-                            }
-                        }
-                        @media (max-width: 375px) {
-                            .inline {
-                                margin-right: 8px;
-                            }
-                        }
-                        @media (max-width: 360px) {
-                            .inline {
-                                margin-right: -4px;
-                            }
-                        }
-                        @media (max-width: 320px) {
-                            .inline {
-                                margin-right: 22px;
-                            }
-                        }
-                        @media (max-width: 280px) {
-                            .inline {
-                                margin-right: -13px;
-                            }
-                        }
-                        & .prix {
-                            align-self: flex-end;
-                            transform: translateX(90px);
-                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                            & h2 {
-                                font-size: 14px; 
-                            }
-                        }
+                    &:hover .gauche {
+                        animation: reduction 1s;
                     }
-                    & span {
-                        background-color: $terciary-color;
-                        width: 35px;
-                        height: 35px;
-                        transform-origin: right 50%;
-                        transform: scaleX(0);
-                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                        padding-top: 25px;
-                        padding-left: 13px;
-                    }.fa-check-circle {
-                        color: white;
-                        transform: rotate(-360deg);
-                        transition: transform 500ms ease-in-out;
-                        animation-fill-mode: backwards;
+                    &:hover .gauche h2 {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
-                }
-                @media (max-width: 999px) {
-                    .ravioles {
-                        width: auto;
+                    &:hover .gauche p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
                 & .caviar { // Seconde entrée
@@ -309,113 +251,80 @@ header {
                     animation: apparition 1800ms 500ms;
                     animation-fill-mode: backwards;
                     overflow: hidden;
+                    & .gauche {         
+                        width: 63%;
+                        & h2 {
+                            font-size: 16px;
+                            margin-bottom: -10px;
+                            margin-right: 4px;
+                            white-space: nowrap; 
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 15px;
+                            }
+                        }
+                        & p {
+                            font-size: 13px;
+                            white-space: nowrap;
+                        }
+                        @media (max-width: 299px) {
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    & .droite {
+                        display: flex;
+                        & h2 {
+                            font-size: 14px;
+                            margin-top: 35px; 
+                            transform: translateX(38px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            margin-right: 4px;
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 13px;
+                            }
+                        }
+                        & span {
+                            background-color: $terciary-color;
+                            width: 32px;
+                            height: 39px;
+                            transform-origin: right 50%;
+                            transform: scaleX(0);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            padding-top: 24px;
+                            padding-left: 9px;
+                            
+                        }
+                        & .fa-check-circle {
+                            color: white;
+                            transform: rotate(-360deg);
+                            transition: transform 500ms ease-in-out;
+                            animation-fill-mode: backwards;
+                        }
+                    }
                     &:hover span {
                         transform: scaleX(1);
                         .fa-check-circle {
                             transform: rotate(0deg);
                         }
                     }
-                    &:hover .text .prix {
-                        transform: translateX(40px)
+                    &:hover .droite h2 {
+                        transform: translateX(0px)
                     }
-                    & .text {
-                        justify-content: space-between;
-                        display: flex;
-                        & .inline {
-                            display: inline;
-                            margin-right: 25px;
-                            & h2 {
-                                font-size: 16px;
-                                margin-bottom: -10px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                            & p {
-                                font-size: 13px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                        }
-                        @media (max-width: 999px) {
-                            .inline {
-                                margin-right: 668px;
-                            }
-                        }
-                        @media (max-width: 768px) {
-                            .inline {
-                                margin-right: 444px;
-                            }
-                        }
-                        @media (max-width: 540px) {
-                            .inline {
-                                margin-right: 219px;
-                            }
-                        }
-                        @media (max-width: 414px) {
-                            .inline {
-                                margin-right: 97px;
-                            }
-                        }
-                        @media (max-width: 411px) {
-                            .inline {
-                                margin-right: 93px;
-                            }
-                        }
-                        @media (max-width: 375px) {
-                            .inline {
-                                margin-right: 58px;
-                            }
-                        }
-                        @media (max-width: 360px) {
-                            .inline {
-                                margin-right: 45px;
-                            }
-                        }
-                        @media (max-width: 320px) {
-                            .inline {
-                                margin-right: 24px;
-                            }
-                        }
-                        @media (max-width: 280px) {
-                            .inline {
-                                margin-right: -15px;
-                            }
-                        }
-                        & .prix {
-                            align-self: flex-end;
-                            transform: translateX(90px);
-                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                            & h2 {
-                                font-size: 14px; 
-                            }
-                        }
+                    &:hover .gauche {
+                        animation: reduction 1s;
                     }
-                    & span {
-                        background-color: $terciary-color;
-                        width: 35px;
-                        height: 35px;
-                        transform-origin: right 50%;
-                        transform: scaleX(0);
-                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                        padding-top: 25px;
-                        padding-left: 13px;
-                    }.fa-check-circle {
-                        color: white;
-                        transform: rotate(-360deg);
-                        transition: transform 500ms ease-in-out;
-                        animation-fill-mode: backwards;
+                    &:hover .gauche h2 {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    &:hover .gauche p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
                 & .homard { // Troisième entrée
@@ -425,113 +334,80 @@ header {
                     animation: apparition 1800ms 800ms;
                     animation-fill-mode: backwards;
                     overflow: hidden;
+                    & .gauche {         
+                        width: 63%;
+                        & h2 {
+                            font-size: 16px;
+                            margin-bottom: -10px;
+                            margin-right: 4px;
+                            white-space: nowrap; 
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 15px;
+                            }
+                        }
+                        & p {
+                            font-size: 13px;
+                            white-space: nowrap;
+                        }
+                        @media (max-width: 299px) {
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    & .droite {
+                        display: flex;
+                        & h2 {
+                            font-size: 14px;
+                            margin-top: 35px; 
+                            transform: translateX(38px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            margin-right: 4px;
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 13px;
+                            }
+                        }
+                        & span {
+                            background-color: $terciary-color;
+                            width: 32px;
+                            height: 39px;
+                            transform-origin: right 50%;
+                            transform: scaleX(0);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            padding-top: 24px;
+                            padding-left: 9px;
+                            
+                        }
+                        & .fa-check-circle {
+                            color: white;
+                            transform: rotate(-360deg);
+                            transition: transform 500ms ease-in-out;
+                            animation-fill-mode: backwards;
+                        }
+                    }
                     &:hover span {
                         transform: scaleX(1);
                         .fa-check-circle {
                             transform: rotate(0deg);
                         }
                     }
-                    &:hover .text .prix {
-                        transform: translateX(40px)
+                    &:hover .droite h2 {
+                        transform: translateX(0px)
                     }
-                    & .text {
-                        justify-content: space-between;
-                        display: flex;
-                        & .inline {
-                            display: inline;
-                            margin-right: -20px;
-                            & h2 {
-                                font-size: 16px;
-                                margin-bottom: -10px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                            & p {
-                                font-size: 13px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                        }
-                        @media (max-width: 999px) {
-                            .inline {
-                                margin-right: 623px;
-                            }
-                        }
-                        @media (max-width: 768px) {
-                            .inline {
-                                margin-right: 397px;
-                            }
-                        }
-                        @media (max-width: 540px) {
-                            .inline {
-                                margin-right: 175px;
-                            }
-                        }
-                        @media (max-width: 414px) {
-                            .inline {
-                                margin-right: 51px;
-                            }
-                        }
-                        @media (max-width: 411px) {
-                            .inline {
-                                margin-right: 47px;
-                            }
-                        }
-                        @media (max-width: 375px) {
-                            .inline {
-                                margin-right: 11px;
-                            }
-                        }
-                        @media (max-width: 360px) {
-                            .inline {
-                                margin-right: -2px;
-                            }
-                        }
-                        @media (max-width: 320px) {
-                            .inline {
-                                margin-right: -42px;
-                            }
-                        }
-                        @media (max-width: 280px) {
-                            .inline {
-                                margin-right: -15px;
-                            }
-                        }
-                        & .prix {
-                            align-self: flex-end;
-                            transform: translateX(90px);
-                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                            & h2 {
-                                font-size: 14px; 
-                            }
-                        }
+                    &:hover .gauche {
+                        animation: reduction 1s;
                     }
-                    & span {
-                        background-color: $terciary-color;
-                        width: 35px;
-                        height: 35px;
-                        transform-origin: right 50%;
-                        transform: scaleX(0);
-                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                        padding-top: 25px;
-                        padding-left: 13px;
-                    }.fa-check-circle {
-                        color: white;
-                        transform: rotate(-360deg);
-                        transition: transform 500ms ease-in-out;
-                        animation-fill-mode: backwards;
+                    &:hover .gauche h2 {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    &:hover .gauche p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
                 & .foie { // Quatrième entrée
@@ -541,113 +417,80 @@ header {
                     animation: apparition 1800ms 1100ms;
                     animation-fill-mode: backwards;
                     overflow: hidden;
+                    & .gauche {         
+                        width: 63%;
+                        & h2 {
+                            font-size: 16px;
+                            margin-bottom: -10px;
+                            margin-right: 4px;
+                            white-space: nowrap; 
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 15px;
+                            }
+                        }
+                        & p {
+                            font-size: 13px;
+                            white-space: nowrap;
+                        }
+                        @media (max-width: 299px) {
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    & .droite {
+                        display: flex;
+                        & h2 {
+                            font-size: 14px;
+                            margin-top: 35px; 
+                            transform: translateX(38px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            margin-right: 4px;
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 13px;
+                            }
+                        }
+                        & span {
+                            background-color: $terciary-color;
+                            width: 32px;
+                            height: 39px;
+                            transform-origin: right 50%;
+                            transform: scaleX(0);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            padding-top: 24px;
+                            padding-left: 9px;
+                            
+                        }
+                        & .fa-check-circle {
+                            color: white;
+                            transform: rotate(-360deg);
+                            transition: transform 500ms ease-in-out;
+                            animation-fill-mode: backwards;
+                        }
+                    }
                     &:hover span {
                         transform: scaleX(1);
                         .fa-check-circle {
                             transform: rotate(0deg);
                         }
                     }
-                    &:hover .text .prix {
-                        transform: translateX(40px)
+                    &:hover .droite h2 {
+                        transform: translateX(0px)
                     }
-                    & .text {
-                        justify-content: space-between;
-                        display: flex;
-                        & .inline {
-                            display: inline;
-                            margin-right: -24px;
-                            & h2 {
-                                font-size: 16px;
-                                margin-bottom: -10px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                            & p {
-                                font-size: 13px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                        }
-                        @media (max-width: 999px) {
-                            .inline {
-                                margin-right: 619px;
-                            }
-                        }
-                        @media (max-width: 768px) {
-                            .inline {
-                                margin-right: 396px;
-                            }
-                        }
-                        @media (max-width: 540px) {
-                            .inline {
-                                margin-right: 173px;
-                            }
-                        }
-                        @media (max-width: 414px) {
-                            .inline {
-                                margin-right: 48px;
-                            }
-                        }
-                        @media (max-width: 411px) {
-                            .inline {
-                                margin-right: 43px;
-                            }
-                        }
-                        @media (max-width: 375px) {
-                            .inline {
-                                margin-right: 8px;
-                            }
-                        }
-                        @media (max-width: 360px) {
-                            .inline {
-                                margin-right: -4px;
-                            }
-                        }
-                        @media (max-width: 320px) {
-                            .inline {
-                                margin-right: -45px;
-                            }
-                        }
-                        @media (max-width: 280px) {
-                            .inline {
-                                margin-right: -15px;
-                            }
-                        }
-                        & .prix {
-                            align-self: flex-end;
-                            transform: translateX(90px);
-                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                            & h2 {
-                                font-size: 14px; 
-                            }
-                        }
+                    &:hover .gauche {
+                        animation: reduction 1s;
                     }
-                    & span {
-                        background-color: $terciary-color;
-                        width: 35px;
-                        height: 35px;
-                        transform-origin: right 50%;
-                        transform: scaleX(0);
-                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                        padding-top: 25px;
-                        padding-left: 13px;
-                    }.fa-check-circle {
-                        color: white;
-                        transform: rotate(-360deg);
-                        transition: transform 500ms ease-in-out;
-                        animation-fill-mode: backwards;
+                    &:hover .gauche h2 {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    &:hover .gauche p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
             }
@@ -669,124 +512,83 @@ header {
                     background-color: white;
                     box-shadow: 0px 6px 10px -5px rgba(201,201,201,1);
                     border-radius: 10px;
-                    height: 60px;
-                    width: 300px;
                     animation: apparition 1800ms 1700ms;
                     animation-fill-mode: backwards;
                     overflow: hidden;
+                    & .gauche {         
+                        width: 63%;
+                        & h2 {
+                            font-size: 16px;
+                            margin-bottom: -10px;
+                            margin-right: 4px;
+                            white-space: nowrap; 
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 15px;
+                            }
+                        }
+                        & p {
+                            font-size: 13px;
+                            white-space: nowrap;
+                        }
+                        @media (max-width: 299px) {
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    & .droite {
+                        display: flex;
+                        & h2 {
+                            font-size: 14px;
+                            margin-top: 35px; 
+                            transform: translateX(38px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            margin-right: 4px;
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 13px;
+                            }
+                        }
+                        & span {
+                            background-color: $terciary-color;
+                            width: 32px;
+                            height: 39px;
+                            transform-origin: right 50%;
+                            transform: scaleX(0);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            padding-top: 24px;
+                            padding-left: 9px;
+                            
+                        }
+                        & .fa-check-circle {
+                            color: white;
+                            transform: rotate(-360deg);
+                            transition: transform 500ms ease-in-out;
+                            animation-fill-mode: backwards;
+                        }
+                    }
                     &:hover span {
                         transform: scaleX(1);
                         .fa-check-circle {
                             transform: rotate(0deg);
                         }
                     }
-                    &:hover .text .prix {
-                        transform: translateX(40px)
+                    &:hover .droite h2 {
+                        transform: translateX(0px)
                     }
-                    & .text {
-                        justify-content: space-between;
-                        display: flex;
-                        & .inline {
-                            display: inline;
-                            margin-right: -33px;
-                            & h2 {
-                                font-size: 16px;
-                                margin-bottom: -10px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                            & p {
-                                font-size: 13px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                        }
-                        @media (max-width: 999px) {
-                            .inline {
-                                margin-right: 615px;
-                            }
-                        }
-                        @media (max-width: 768px) {
-                            .inline {
-                                margin-right: 392px;
-                            }
-                        }
-                        @media (max-width: 540px) {
-                            .inline {
-                                margin-right: 169px;
-                            }
-                        }
-                        @media (max-width: 414px) {
-                            .inline {
-                                margin-right: 44px;
-                            }
-                        }
-                        @media (max-width: 411px) {
-                            .inline {
-                                margin-right: 39px;
-                            }
-                        }
-                        @media (max-width: 375px) {
-                            .inline {
-                                margin-right: 4px;
-                            }
-                        }
-                        @media (max-width: 360px) {
-                            .inline {
-                                margin-right: -8px;
-                            }
-                        }
-                        @media (max-width: 320px) {
-                            .inline {
-                                margin-right: -49px;
-                            }
-                        }
-                        @media (max-width: 280px) {
-                            .inline {
-                                margin-right: -28px;
-                            }
-                        }
-                        & .prix {
-                            margin-right: -25px;
-                            align-self: flex-end;
-                            transform: translateX(90px);
-                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                            & h2 {
-                                font-size: 14px; 
-                            }
-                        }
+                    &:hover .gauche {
+                        animation: reduction 1s;
                     }
-                    & span {
-                        background-color: $terciary-color;
-                        width: 35px;
-                        height: 35px;
-                        transform-origin: right 50%;
-                        transform: scaleX(0);
-                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                        padding-top: 25px;
-                        padding-left: 13px;
-                    }.fa-check-circle {
-                        color: white;
-                        transform: rotate(-360deg);
-                        transition: transform 500ms ease-in-out;
-                        animation-fill-mode: backwards;
+                    &:hover .gauche h2 {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
-                }
-                @media (max-width: 999px) {
-                    .noix {
-                        width: auto;
+                    &:hover .gauche p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
                 & .langoustine { // Second plat
@@ -795,113 +597,80 @@ header {
                     animation: apparition 1800ms 2000ms;
                     animation-fill-mode: backwards;
                     overflow: hidden;
+                    & .gauche {         
+                        width: 63%;
+                        & h2 {
+                            font-size: 16px;
+                            margin-bottom: -10px;
+                            margin-right: 4px;
+                            white-space: nowrap; 
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 15px;
+                            }
+                        }
+                        & p {
+                            font-size: 13px;
+                            white-space: nowrap;
+                        }
+                        @media (max-width: 299px) {
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    & .droite {
+                        display: flex;
+                        & h2 {
+                            font-size: 14px;
+                            margin-top: 35px; 
+                            transform: translateX(38px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            margin-right: 4px;
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 13px;
+                            }
+                        }
+                        & span {
+                            background-color: $terciary-color;
+                            width: 32px;
+                            height: 39px;
+                            transform-origin: right 50%;
+                            transform: scaleX(0);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            padding-top: 24px;
+                            padding-left: 9px;
+                            
+                        }
+                        & .fa-check-circle {
+                            color: white;
+                            transform: rotate(-360deg);
+                            transition: transform 500ms ease-in-out;
+                            animation-fill-mode: backwards;
+                        }
+                    }
                     &:hover span {
                         transform: scaleX(1);
                         .fa-check-circle {
                             transform: rotate(0deg);
                         }
                     }
-                    &:hover .text .prix {
-                        transform: translateX(40px)
+                    &:hover .droite h2 {
+                        transform: translateX(0px)
                     }
-                    & .text {
-                        justify-content: space-between;
-                        display: flex;
-                        & .inline {
-                            display: inline;
-                            margin-right: 50px;
-                            & h2 {
-                                font-size: 16px;
-                                margin-bottom: -10px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                            & p {
-                                font-size: 13px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                        }
-                        @media (max-width: 999px) {
-                            .inline {
-                                margin-right: 699px;
-                            }
-                        }
-                        @media (max-width: 768px) {
-                            .inline {
-                                margin-right: 476px;
-                            }
-                        }
-                        @media (max-width: 540px) {
-                            .inline {
-                                margin-right: 253px;
-                            }
-                        }
-                        @media (max-width: 414px) {
-                            .inline {
-                                margin-right: 128px;
-                            }
-                        }
-                        @media (max-width: 411px) {
-                            .inline {
-                                margin-right: 123px;
-                            }
-                        }
-                        @media (max-width: 375px) {
-                            .inline {
-                                margin-right: 88px;
-                            }
-                        }
-                        @media (max-width: 360px) {
-                            .inline {
-                                margin-right: 74px;
-                            }
-                        }
-                        @media (max-width: 320px) {
-                            .inline {
-                                margin-right: 35px;
-                            }
-                        }
-                        @media (max-width: 280px) {
-                            .inline {
-                                margin-right: -13px;
-                            }
-                        }
-                        & .prix {
-                            align-self: flex-end;
-                            transform: translateX(90px);
-                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                            & h2 {
-                                font-size: 14px; 
-                            }
-                        }
+                    &:hover .gauche {
+                        animation: reduction 1s;
                     }
-                    & span {
-                        background-color: $terciary-color;
-                        width: 35px;
-                        height: 35px;
-                        transform-origin: right 50%;
-                        transform: scaleX(0);
-                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                        padding-top: 25px;
-                        padding-left: 13px;
-                    }.fa-check-circle {
-                        color: white;
-                        transform: rotate(-360deg);
-                        transition: transform 500ms ease-in-out;
-                        animation-fill-mode: backwards;
+                    &:hover .gauche h2 {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    &:hover .gauche p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
                 & .mijote { // Troisième plat
@@ -910,113 +679,80 @@ header {
                     animation: apparition 1800ms 2300ms;
                     animation-fill-mode: backwards;
                     overflow: hidden;
+                    & .gauche {         
+                        width: 63%;
+                        & h2 {
+                            font-size: 16px;
+                            margin-bottom: -10px;
+                            margin-right: 4px;
+                            white-space: nowrap; 
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 15px;
+                            }
+                        }
+                        & p {
+                            font-size: 13px;
+                            white-space: nowrap;
+                        }
+                        @media (max-width: 299px) {
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    & .droite {
+                        display: flex;
+                        & h2 {
+                            font-size: 14px;
+                            margin-top: 35px; 
+                            transform: translateX(38px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            margin-right: 4px;
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 13px;
+                            }
+                        }
+                        & span {
+                            background-color: $terciary-color;
+                            width: 32px;
+                            height: 39px;
+                            transform-origin: right 50%;
+                            transform: scaleX(0);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            padding-top: 24px;
+                            padding-left: 9px;
+                            
+                        }
+                        & .fa-check-circle {
+                            color: white;
+                            transform: rotate(-360deg);
+                            transition: transform 500ms ease-in-out;
+                            animation-fill-mode: backwards;
+                        }
+                    }
                     &:hover span {
                         transform: scaleX(1);
                         .fa-check-circle {
                             transform: rotate(0deg);
                         }
                     }
-                    &:hover .text .prix {
-                        transform: translateX(40px)
+                    &:hover .droite h2 {
+                        transform: translateX(0px)
                     }
-                    & .text {
-                        justify-content: space-between;
-                        display: flex;
-                        & .inline {
-                            display: inline;
-                            margin-right: 2px;
-                            & h2 {
-                                font-size: 16px;
-                                margin-bottom: -10px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                            & p {
-                                font-size: 13px;
-                            }
-                            @media (max-width: 320px) {
-                                & p {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                        }
-                        @media (max-width: 999px) {
-                            .inline {
-                                margin-right: 649px;
-                            }
-                        }
-                        @media (max-width: 768px) {
-                            .inline {
-                                margin-right: 426px;
-                            }
-                        }
-                        @media (max-width: 540px) {
-                            .inline {
-                                margin-right: 203px;
-                            }
-                        }
-                        @media (max-width: 414px) {
-                            .inline {
-                                margin-right: 78px;
-                            }
-                        }
-                        @media (max-width: 411px) {
-                            .inline {
-                                margin-right: 73px;
-                            }
-                        }
-                        @media (max-width: 375px) {
-                            .inline {
-                                margin-right: 38px;
-                            }
-                        }
-                        @media (max-width: 360px) {
-                            .inline {
-                                margin-right: 24px;
-                            }
-                        }
-                        @media (max-width: 320px) {
-                            .inline {
-                                margin-right: -15px;
-                            }
-                        }
-                        @media (max-width: 280px) {
-                            .inline {
-                                margin-right: -14px;
-                            }
-                        }
-                        & .prix {
-                            align-self: flex-end;
-                            transform: translateX(90px);
-                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                            & h2 {
-                                font-size: 14px; 
-                            }
-                        }
+                    &:hover .gauche {
+                        animation: reduction 1s;
                     }
-                    & span {
-                        background-color: $terciary-color;
-                        width: 35px;
-                        height: 35px;
-                        transform-origin: right 50%;
-                        transform: scaleX(0);
-                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                        padding-top: 25px;
-                        padding-left: 13px;
-                    }.fa-check-circle {
-                        color: white;
-                        transform: rotate(-360deg);
-                        transition: transform 500ms ease-in-out;
-                        animation-fill-mode: backwards;
+                    &:hover .gauche h2 {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    &:hover .gauche p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
             }
@@ -1026,6 +762,11 @@ header {
                 & #text3 {
                     border-bottom: 3px solid $terciary-color;
                     width: 35px;
+                }
+                @media (max-width: 999px) {
+                    #text3 {
+                        animation: refresh 1ms infinite;
+                    }
                 }
                 & p {
                 font-size: 16px;
@@ -1043,113 +784,80 @@ header {
                     animation: apparition 1800ms 2900ms;
                     animation-fill-mode: backwards;
                     overflow: hidden;
+                    & .gauche {         
+                        width: 63%;
+                        & h2 {
+                            font-size: 16px;
+                            margin-bottom: -10px;
+                            margin-right: 4px;
+                            white-space: nowrap; 
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 15px;
+                            }
+                        }
+                        & p {
+                            font-size: 13px;
+                            white-space: nowrap;
+                        }
+                        @media (max-width: 299px) {
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    & .droite {
+                        display: flex;
+                        & h2 {
+                            font-size: 14px;
+                            margin-top: 35px; 
+                            transform: translateX(38px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            margin-right: 4px;
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 13px;
+                            }
+                        }
+                        & span {
+                            background-color: $terciary-color;
+                            width: 32px;
+                            height: 39px;
+                            transform-origin: right 50%;
+                            transform: scaleX(0);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            padding-top: 24px;
+                            padding-left: 9px;
+                            
+                        }
+                        & .fa-check-circle {
+                            color: white;
+                            transform: rotate(-360deg);
+                            transition: transform 500ms ease-in-out;
+                            animation-fill-mode: backwards;
+                        }
+                    }
                     &:hover span {
                         transform: scaleX(1);
                         .fa-check-circle {
                             transform: rotate(0deg);
                         }
                     }
-                    &:hover .text .prix {
-                        transform: translateX(40px)
+                    &:hover .droite h2 {
+                        transform: translateX(0px)
                     }
-                    & .text {
-                        justify-content: space-between;
-                        display: flex;
-                        & .inline {
-                            display: inline;
-                            margin-right: -33px;
-                            & h2 {
-                                font-size: 16px;
-                                margin-bottom: -10px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                            & p {
-                                font-size: 13px;
-                            }
-                            @media (max-width: 320px) {
-                                & p {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                        }
-                        @media (max-width: 999px) {
-                            .inline {
-                                margin-right: 613px;
-                            }
-                        }
-                        @media (max-width: 768px) {
-                            .inline {
-                                margin-right: 390px;
-                            }
-                        }
-                        @media (max-width: 540px) {
-                            .inline {
-                                margin-right: 167px;
-                            }
-                        }
-                        @media (max-width: 414px) {
-                            .inline {
-                                margin-right: 42px;
-                            }
-                        }
-                        @media (max-width: 411px) {
-                            .inline {
-                                margin-right: 37px;
-                            }
-                        }
-                        @media (max-width: 375px) {
-                            .inline {
-                                margin-right: 2px;
-                            }
-                        }
-                        @media (max-width: 360px) {
-                            .inline {
-                                margin-right: -12px;
-                            }
-                        }
-                        @media (max-width: 320px) {
-                            .inline {
-                                margin-right: -31px;
-                            }
-                        }
-                        @media (max-width: 280px) {
-                            .inline {
-                                margin-right: -16px;
-                            }
-                        }
-                        & .prix {
-                            align-self: flex-end;
-                            transform: translateX(90px);
-                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                            & h2 {
-                                font-size: 14px; 
-                            }
-                        }
+                    &:hover .gauche {
+                        animation: reduction 1s;
                     }
-                    & span {
-                        background-color: $terciary-color;
-                        width: 35px;
-                        height: 35px;
-                        transform-origin: right 50%;
-                        transform: scaleX(0);
-                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                        padding-top: 25px;
-                        padding-left: 13px;
-                    }.fa-check-circle {
-                        color: white;
-                        transform: rotate(-360deg);
-                        transition: transform 500ms ease-in-out;
-                        animation-fill-mode: backwards;
+                    &:hover .gauche h2 {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    &:hover .gauche p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
                 @media (max-width: 999px) {
@@ -1165,123 +873,83 @@ header {
                     background-color: white;
                     box-shadow: 0px 6px 10px -5px rgba(201,201,201,1);
                     border-radius: 10px;
-                    height: 60px;
-                    width: 300px;
                     animation: apparition 1800ms 3200ms;
                     animation-fill-mode: backwards;
                     overflow: hidden;
+                    & .gauche {         
+                        width: 63%;
+                        & h2 {
+                            font-size: 16px;
+                            margin-bottom: -10px;
+                            margin-right: 4px;
+                            white-space: nowrap; 
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 15px;
+                            }
+                        }
+                        & p {
+                            font-size: 13px;
+                            white-space: nowrap;
+                        }
+                        @media (max-width: 299px) {
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    & .droite {
+                        display: flex;
+                        & h2 {
+                            font-size: 14px;
+                            margin-top: 35px; 
+                            transform: translateX(38px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            margin-right: 4px;
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 13px;
+                            }
+                        }
+                        & span {
+                            background-color: $terciary-color;
+                            width: 32px;
+                            height: 39px;
+                            transform-origin: right 50%;
+                            transform: scaleX(0);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            padding-top: 24px;
+                            padding-left: 9px;
+                            
+                        }
+                        & .fa-check-circle {
+                            color: white;
+                            transform: rotate(-360deg);
+                            transition: transform 500ms ease-in-out;
+                            animation-fill-mode: backwards;
+                        }
+                    }
                     &:hover span {
                         transform: scaleX(1);
                         .fa-check-circle {
                             transform: rotate(0deg);
                         }
                     }
-                    &:hover .text .prix {
-                        transform: translateX(40px)
+                    &:hover .droite h2 {
+                        transform: translateX(0px)
                     }
-                    & .text {
-                        justify-content: space-between;
-                        display: flex;
-                        & .inline {
-                            display: inline;
-                            margin-right: 30px;
-                            & h2 {
-                                font-size: 16px;
-                                margin-bottom: -10px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                            & p {
-                                font-size: 13px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                        }
-                        @media (max-width: 999px) {
-                            .inline {
-                                margin-right: 679px;
-                            }
-                        }
-                        @media (max-width: 768px) {
-                            .inline {
-                                margin-right: 453px;
-                            }
-                        }
-                        @media (max-width: 540px) {
-                            .inline {
-                                margin-right: 230px;
-                            }
-                        }
-                        @media (max-width: 414px) {
-                            .inline {
-                                margin-right: 108px;
-                            }
-                        }
-                        @media (max-width: 411px) {
-                            .inline {
-                                margin-right: 103px;
-                            }
-                        }
-                        @media (max-width: 375px) {
-                            .inline {
-                                margin-right: 68px;
-                            }
-                        }
-                        @media (max-width: 360px) {
-                            .inline {
-                                margin-right: 54px;
-                            }
-                        }
-                        @media (max-width: 320px) {
-                            .inline {
-                                margin-right: 15px;
-                            }
-                        }
-                        @media (max-width: 280px) {
-                            .inline {
-                                margin-right: -13px;
-                            }
-                        }
-                        & .prix {
-                            align-self: flex-end;
-                            transform: translateX(90px);
-                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                            & h2 {
-                                font-size: 14px; 
-                            }
-                        }
+                    &:hover .gauche {
+                        animation: reduction 1s;
                     }
-                    & span {
-                        background-color: $terciary-color;
-                        width: 35px;
-                        height: 35px;
-                        transform-origin: right 50%;
-                        transform: scaleX(0);
-                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                        padding-top: 25px;
-                        padding-left: 13px;
-                    }.fa-check-circle {
-                        color: white;
-                        transform: rotate(-360deg);
-                        transition: transform 500ms ease-in-out;
-                        animation-fill-mode: backwards;
+                    &:hover .gauche h2 {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
-                }
-                @media (max-width: 999px) {
-                    .baba {
-                        width: auto;
+                    &:hover .gauche p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
                 & .tarte { // Troisième dessert
@@ -1292,123 +960,83 @@ header {
                     background-color: white;
                     box-shadow: 0px 6px 10px -5px rgba(201,201,201,1);
                     border-radius: 10px;
-                    height: 60px;
-                    width: 300px;
                     animation: apparition 1800ms 3500ms;
                     animation-fill-mode: backwards;
                     overflow: hidden;
+                    & .gauche {         
+                        width: 63%;
+                        & h2 {
+                            font-size: 16px;
+                            margin-bottom: -10px;
+                            margin-right: 4px;
+                            white-space: nowrap; 
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 15px;
+                            }
+                        }
+                        & p {
+                            font-size: 13px;
+                            white-space: nowrap;
+                        }
+                        @media (max-width: 299px) {
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    & .droite {
+                        display: flex;
+                        & h2 {
+                            font-size: 14px;
+                            margin-top: 35px; 
+                            transform: translateX(38px);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            margin-right: 4px;
+                        }
+                        @media (max-width: 299px) {
+                            h2 {
+                                font-size: 13px;
+                            }
+                        }
+                        & span {
+                            background-color: $terciary-color;
+                            width: 32px;
+                            height: 39px;
+                            transform-origin: right 50%;
+                            transform: scaleX(0);
+                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
+                            padding-top: 24px;
+                            padding-left: 9px;
+                            
+                        }
+                        & .fa-check-circle {
+                            color: white;
+                            transform: rotate(-360deg);
+                            transition: transform 500ms ease-in-out;
+                            animation-fill-mode: backwards;
+                        }
+                    }
                     &:hover span {
                         transform: scaleX(1);
                         .fa-check-circle {
                             transform: rotate(0deg);
                         }
                     }
-                    &:hover .text .prix {
-                        transform: translateX(40px)
+                    &:hover .droite h2 {
+                        transform: translateX(0px)
                     }
-                    & .text {
-                        justify-content: space-between;
-                        display: flex;
-                        & .inline {
-                            display: inline;
-                            margin-right: 4px;
-                            & h2 {
-                                font-size: 16px;
-                                margin-bottom: -10px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                            & p {
-                                font-size: 13px;
-                            }
-                            @media (max-width: 310px) {
-                                & h2 {
-                                    width: 138px;
-                                    white-space: nowrap;
-                                    overflow: hidden;
-                                    text-overflow: ellipsis;
-                                }
-                            }
-                        }
-                        @media (max-width: 999px) {
-                            .inline {
-                                margin-right: 649px;
-                            }
-                        }
-                        @media (max-width: 768px) {
-                            .inline {
-                                margin-right: 426px;
-                            }
-                        }
-                        @media (max-width: 540px) {
-                            .inline {
-                                margin-right: 203px;
-                            }
-                        }
-                        @media (max-width: 414px) {
-                            .inline {
-                                margin-right: 78px;
-                            }
-                        }
-                        @media (max-width: 411px) {
-                            .inline {
-                                margin-right: 73px;
-                            }
-                        }
-                        @media (max-width: 375px) {
-                            .inline {
-                                margin-right: 38px;
-                            }
-                        }
-                        @media (max-width: 360px) {
-                            .inline {
-                                margin-right: 24px;
-                            }
-                        }
-                        @media (max-width: 320px) {
-                            .inline {
-                                margin-right: -15px;
-                            }
-                        }
-                        @media (max-width: 280px) {
-                            .inline {
-                                margin-right: -13px;
-                            }
-                        }
-                        & .prix {
-                            align-self: flex-end;
-                            transform: translateX(90px);
-                            transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                            & h2 {
-                                font-size: 14px; 
-                            }
-                        }
+                    &:hover .gauche {
+                        animation: reduction 1s;
                     }
-                    & span {
-                        background-color: $terciary-color;
-                        width: 35px;
-                        height: 35px;
-                        transform-origin: right 50%;
-                        transform: scaleX(0);
-                        transition: transform 1000ms cubic-bezier(.32,0,.07,1);
-                        padding-top: 25px;
-                        padding-left: 13px;
-                    }.fa-check-circle {
-                        color: white;
-                        transform: rotate(-360deg);
-                        transition: transform 500ms ease-in-out;
-                        animation-fill-mode: backwards;
+                    &:hover .gauche h2 {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
-                }
-                @media (max-width: 999px) {
-                    .tarte {
-                        width: auto;
+                    &:hover .gauche p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
             }
@@ -1425,8 +1053,6 @@ header {
                 border-radius: 20px;
                 padding: 14px 20px 14px 20px;
                 width: 6%;
-                margin-top: 20px;
-                margin-bottom: 20px;
                 color: #f5f5f5;
                 font-size: 13px;
                 text-decoration: none;
@@ -1436,11 +1062,40 @@ header {
                 }
             }
         }
+        @media (max-width: 999px) {
+            .btn {
+                margin-left: 50%;
+            }
+        }
+        @media (max-width: 850px) {
+            .btn {
+                margin-left: 40%;
+            }
+        }
+        @media (max-width: 350px) {
+            .btn {
+                margin-left: 35%;
+            }
+        }
+        @media (max-width: 330px) {
+            .btn {
+                margin-left: 27%;
+            }
+        }
     }
     @media (max-width: 999px) {
         .carte {
-            height: 985px;
-            width: 98%;
+            height: 1000px;
+            width: 96%;
+            position: relative;
+            margin-top: 55%;
+            border-radius: 40px 40px 0 0;
+            padding-top: 20px;
+        }
+    }
+    @media (max-width: 320px) {
+        .carte {
+            width: 95%;
         }
     }
 }
@@ -1450,6 +1105,12 @@ header {
 }
 @media (max-width: 999px) {
     footer {
-        width: 98%;
+        width: 96%;
+        margin-top: 5px;
+    }
+}
+@media (max-width: 320px) {
+    footer {
+        width: 95%;
     }
 }

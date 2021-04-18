@@ -40,6 +40,28 @@
     transform: rotate(360deg);
   }
 }
+@keyframes reduction {
+  from {
+    width: 75%;
+  }
+  40% {
+    width: 75%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes refresh {
+  from {
+    margin-right: 4px;
+  }
+  50% {
+    margin-right: 3px;
+  }
+  to {
+    margin-right: 4px;
+  }
+}
 footer {
   padding: 2px 0 0 20px;
   margin-top: -15px;
@@ -106,6 +128,28 @@ footer ul li .fa-handshake {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@keyframes reduction {
+  from {
+    width: 75%;
+  }
+  40% {
+    width: 75%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes refresh {
+  from {
+    margin-right: 4px;
+  }
+  50% {
+    margin-right: 3px;
+  }
+  to {
+    margin-right: 4px;
   }
 }
 .loading-spinner {
@@ -281,11 +325,31 @@ body {
 }
 
 header .logo {
-  margin: 0 0 10px 15px;
+  margin: 0 0 10px 120px;
   padding-top: 10px;
 }
 header .logo #logo_omf {
   width: 220px;
+}
+@media (max-width: 465px) {
+  header .logo {
+    margin-left: 70px;
+  }
+}
+@media (max-width: 365px) {
+  header .logo {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 315px) {
+  header .logo {
+    margin-left: 40px;
+  }
+}
+@media (max-width: 300px) {
+  header .logo {
+    margin-left: 30px;
+  }
 }
 header .localisation, header .localisation .fonctionnement {
   display: inline;
@@ -294,16 +358,15 @@ header .localisation, header .localisation .fonctionnement {
 @media (max-width: 769px) {
   header .localisation, header .localisation .fonctionnement {
     display: initial;
-    margin-left: 20px;
   }
 }
 header .localisation .gps {
   margin: 0 0 -8px 15px;
-  padding-left: 15px;
+  padding-left: 160px;
   border-bottom: 2px solid #d1d1d1;
   background-color: #e3e3e3;
   border-radius: 10px;
-  width: 405px;
+  width: 260px;
   display: flex;
   position: relative;
   z-index: 2;
@@ -320,12 +383,26 @@ header .localisation .gps h3 {
 }
 @media (max-width: 465px) {
   header .localisation .gps {
-    width: 320px;
+    width: 215px;
+    padding-left: 120px;
   }
 }
 @media (max-width: 365px) {
   header .localisation .gps {
-    width: 275px;
+    width: 200px;
+    padding-left: 90px;
+  }
+}
+@media (max-width: 315px) {
+  header .localisation .gps {
+    width: 195px;
+    padding-left: 80px;
+  }
+}
+@media (max-width: 300px) {
+  header .localisation .gps {
+    width: 185px;
+    padding-left: 70px;
   }
 }
 header .localisation .description {
@@ -345,6 +422,11 @@ header .localisation .description > h2 {
 header .localisation .description p {
   font-size: 15px;
   margin-bottom: 40px;
+}
+@media (max-width: 300px) {
+  header .localisation .description p {
+    margin-bottom: 20px;
+  }
 }
 header .localisation .description .bouton a {
   margin-bottom: 50px;
@@ -370,11 +452,26 @@ header .localisation .description .bouton a:hover {
     width: 270px;
   }
 }
+@media (max-width: 315px) {
+  header .localisation .description {
+    width: 255px;
+  }
+}
+@media (max-width: 300px) {
+  header .localisation .description {
+    width: 235px;
+  }
+}
 header .fonctionnement {
   margin: -58px 0 40px 465px;
 }
 header .fonctionnement > h2 {
   margin-bottom: 16px;
+}
+@media (max-width: 999px) {
+  header .fonctionnement h2 {
+    animation: refresh 1ms infinite;
+  }
 }
 header .fonctionnement .etape-1, header .fonctionnement .etape-3, header .fonctionnement .etape-2 {
   margin-bottom: 20px;
@@ -386,6 +483,9 @@ header .fonctionnement .etape-1, header .fonctionnement .etape-3, header .foncti
 header .fonctionnement .etape-1:hover, header .fonctionnement .etape-3:hover, header .fonctionnement .etape-2:hover {
   background-color: #eee0ff;
   box-shadow: 0px 6px 10px 0px #c9c9c9;
+}
+header .fonctionnement .etape-1:hover .fa-mobile-alt, header .fonctionnement .etape-3:hover .fa-mobile-alt, header .fonctionnement .etape-2:hover .fa-mobile-alt {
+  color: #9356DC;
 }
 header .fonctionnement .etape-1 h3, header .fonctionnement .etape-3 h3, header .fonctionnement .etape-2 h3 {
   margin: 0;
@@ -410,6 +510,14 @@ header .fonctionnement .etape-1 h3 a .fa-mobile-alt, header .fonctionnement .eta
   margin-right: 15px;
   color: #8a8a8a;
 }
+@media (max-width: 315px) {
+  header .fonctionnement .etape-1, header .fonctionnement .etape-3, header .fonctionnement .etape-2 {
+    width: auto;
+  }
+}
+header .fonctionnement .etape-2:hover .fa-list {
+  color: #9356DC;
+}
 header .fonctionnement .etape-2 h3 {
   margin: 0;
 }
@@ -432,6 +540,9 @@ header .fonctionnement .etape-2 h3 a span {
 header .fonctionnement .etape-2 h3 a .fa-list {
   margin-right: 15px;
   color: #8a8a8a;
+}
+header .fonctionnement .etape-3:hover .fa-store {
+  color: #9356DC;
 }
 header .fonctionnement .etape-3 h3 {
   margin: 0;

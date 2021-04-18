@@ -112,10 +112,30 @@ body {
 // headder
 header {
     .logo { // Logo ohmyfood
-        margin: 0 0 10px 15px;
+        margin: 0 0 10px 120px;
         padding-top: 10px;
         & #logo_omf {
             width: 220px;
+        }
+    }
+    @media (max-width: 465px) {
+        .logo {
+            margin-left: 70px;
+        }
+    }
+    @media (max-width: 365px) {
+        .logo {
+            margin-left: 50px;
+        }
+    }
+    @media (max-width: 315px) {
+        .logo {
+            margin-left: 40px;
+        }
+    }
+    @media (max-width: 300px) {
+        .logo {
+            margin-left: 30px;
         }
     }
     .localisation { // Logo gps + lieu
@@ -126,16 +146,15 @@ header {
     @media (max-width: 769px) {
         &, .fonctionnement {
             display: initial;
-            margin-left: 20px;
         }
     }
         & .gps {
             margin: 0 0 -8px 15px;
-            padding-left: 15px;
+            padding-left: 160px;
             border-bottom: 2px solid #d1d1d1;
             background-color: #e3e3e3;
             border-radius: 10px;
-            width: 405px;
+            width: 260px;
             display: flex;
             position: relative;
             z-index: 2;
@@ -152,12 +171,26 @@ header {
         }
         @media (max-width: 465px) {
             .gps {
-                width: 320px;
+                width: 215px;
+                padding-left: 120px;
             }
         }
         @media (max-width: 365px) {
             .gps {
-                width: 275px;
+                width: 200px;
+                padding-left: 90px;
+            }
+        }
+        @media (max-width: 315px) {
+            .gps {
+                width: 195px;
+                padding-left: 80px;
+            }
+        }
+        @media (max-width: 300px) {
+            .gps {
+                width: 185px;
+                padding-left: 70px;
             }
         }
         & .description {
@@ -176,6 +209,11 @@ header {
             & p {
                 font-size: 15px;
                 margin-bottom: 40px;
+            }
+            @media (max-width: 300px) {
+                p {
+                    margin-bottom: 20px;
+                }
             }
             & .bouton {
                 & a {
@@ -203,12 +241,27 @@ header {
             .description {
                 width: 270px;
             }
-        } 
+        }
+        @media (max-width: 315px) {
+            .description {
+                width: 255px;
+            }
+        }
+        @media (max-width: 300px) {
+            .description {
+                width: 235px;
+            }
+        }
     }
     .fonctionnement {
         margin: -58px 0 40px 465px;
         > h2 {
             margin-bottom: 16px;
+        }
+        @media (max-width: 999px) {
+            h2 {
+                animation: refresh 1ms infinite;
+            }
         }
         & .etape-1 {
             margin-bottom: 20px;
@@ -219,6 +272,9 @@ header {
             &:hover {
                 background-color: #eee0ff;
                 box-shadow: 0px 6px 10px 0px rgba(201,201,201,1);
+            }
+            &:hover .fa-mobile-alt {
+                color: $primary-color;
             }
             & h3 {
                 margin: 0;
@@ -244,9 +300,17 @@ header {
                 }
             }
         }
+        @media (max-width: 315px) {
+            .etape-1 {
+                width: auto;
+            }
+        }
         & .etape-2 {
             @extend .etape-1;
 
+            &:hover .fa-list {
+                color: $primary-color;
+            }
             & h3 {
                 margin: 0;
                 & a {
@@ -274,6 +338,9 @@ header {
         & .etape-3 {
             @extend .etape-1;
             
+            &:hover .fa-store {
+                color: $primary-color;
+            }
             & h3 {
                 margin: 0;
                 & a {
@@ -575,4 +642,3 @@ aside {
         }
     }
 }
-// Animations
