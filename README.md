@@ -1,1 +1,1 @@
-Projet OhMyFood OC Contient un fichier HTML et un fichier CSS
+Projet OhMyFood OC Contient un fichier HTML, un fichier CSS et un fichier SCSS
